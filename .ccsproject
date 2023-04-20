@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVersion value="11.0.0"/>
+	<deviceVariant value="MSP430F5529"/>
+	<deviceFamily value="MSP430"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="GNU_4.6.3:Energia"/>
+	<isElfFormat value="true"/>
+	<connection value="common/targetdb/connections/TIMSP430-USB.xml"/>
+	<rts value=""/>
+	<createSlaveProjects value=""/>
+	<ignoreDefaultDeviceSettings value="true"/>
+	<origin value="/home/sew/ti/ccs1040/ccs/eclipse/plugins/com.ti.ccstudio.energia.core_10.3.0.202105291800/templates/blank.ino"/>
+	<filesToOpen value="Satellitt Design ADCS.ino"/>
+</projectOptions>
