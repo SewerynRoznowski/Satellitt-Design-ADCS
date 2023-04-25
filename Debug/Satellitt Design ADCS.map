@@ -206,9 +206,14 @@ Discarded input sections
                 0x0000000000000000        0x8 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
  .text.enableWatchDog
                 0x0000000000000000        0x6 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .text.millis   0x0000000000000000       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
  .text.delayMicroseconds
                 0x0000000000000000       0x1a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .text.sleepSeconds
+                0x0000000000000000       0xbe /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .text.sleep    0x0000000000000000       0xde /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
  .text.suspend  0x0000000000000000       0x26 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .bss.vlo_freq  0x0000000000000000        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
  .text          0x0000000000000000        0x0 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
  .data          0x0000000000000000        0x0 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
  .bss           0x0000000000000000        0x0 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
@@ -221,6 +226,8 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
  .text._ZN14HardwareSerial3endEv
                 0x0000000000000000       0x1c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+ .text._ZN14HardwareSerialcvbEv
+                0x0000000000000000        0x4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
  .text          0x0000000000000000        0x0 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(main.o)
  .data          0x0000000000000000        0x0 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(main.o)
  .bss           0x0000000000000000        0x0 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(main.o)
@@ -247,6 +254,8 @@ Discarded input sections
  .text._ZN5Print5printERK9Printable
                 0x0000000000000000        0xc /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
  .text._ZN5Print7printlnERK6String
+                0x0000000000000000       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+ .text._ZN5Print7printlnEPKc
                 0x0000000000000000       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
  .text._ZN5Print7printlnEc
                 0x0000000000000000       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
@@ -469,6 +478,7 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod16.o)
  .data          0x0000000000000000        0x0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod16.o)
  .bss           0x0000000000000000        0x0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod16.o)
+ .text.libgcc   0x0000000000000000       0x22 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod16.o)
  .text          0x0000000000000000        0x0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod32.o)
  .data          0x0000000000000000        0x0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod32.o)
  .bss           0x0000000000000000        0x0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod32.o)
@@ -1475,7 +1485,7 @@ LOAD /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000004400     0x1452
+.text           0x0000000000004400     0x123c
                 0x0000000000004400                . = ALIGN (0x2)
  *(.init .init.*)
  *(.init0)
@@ -1573,255 +1583,236 @@ LOAD /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/
                 0x0000000000004476                __isr_62
                 0x0000000000004476                __isr_52
                 0x0000000000004476                __isr_40
- .text.setup    0x000000000000447a       0x6e ./Satellitt Design ADCS.o
+ .text.setup    0x000000000000447a       0x4a ./Satellitt Design ADCS.o
                 0x000000000000447a                setup
- .text.loop     0x00000000000044e8      0x12a ./Satellitt Design ADCS.o
-                0x00000000000044e8                loop
+ .text.loop     0x00000000000044c4      0x122 ./Satellitt Design ADCS.o
+                0x00000000000044c4                loop
  .text._ZN7TwoWire9availableEv
-                0x0000000000004612        0xc /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x0000000000004612                _ZN7TwoWire9availableEv
+                0x00000000000045e6        0xc /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x00000000000045e6                _ZN7TwoWire9availableEv
  .text._ZN7TwoWire4readEv
-                0x000000000000461e       0x1c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x000000000000461e                _ZN7TwoWire4readEv
+                0x00000000000045f2       0x1c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x00000000000045f2                _ZN7TwoWire4readEv
  .text._ZN7TwoWire4peekEv
-                0x000000000000463a       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x000000000000463a                _ZN7TwoWire4peekEv
+                0x000000000000460e       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x000000000000460e                _ZN7TwoWire4peekEv
  .text._ZN7TwoWire5flushEv
-                0x0000000000004650        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x0000000000004650                _ZN7TwoWire5flushEv
+                0x0000000000004624        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x0000000000004624                _ZN7TwoWire5flushEv
  .text._ZN7TwoWire5writeEPKhj
-                0x0000000000004652       0x36 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x0000000000004652                _ZN7TwoWire5writeEPKhj
+                0x0000000000004626       0x36 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x0000000000004626                _ZN7TwoWire5writeEPKhj
  .text._ZN7TwoWire5writeEh
-                0x0000000000004688       0x42 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x0000000000004688                _ZN7TwoWire5writeEh
+                0x000000000000465c       0x42 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x000000000000465c                _ZN7TwoWire5writeEh
  .text._ZN7TwoWireC2Ev
-                0x00000000000046ca       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x00000000000046ca                _ZN7TwoWireC2Ev
-                0x00000000000046ca                _ZN7TwoWireC1Ev
+                0x000000000000469e       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x000000000000469e                _ZN7TwoWireC2Ev
+                0x000000000000469e                _ZN7TwoWireC1Ev
  .text._ZN7TwoWire5beginEv
-                0x00000000000046e0       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x00000000000046e0                _ZN7TwoWire5beginEv
+                0x00000000000046b4       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x00000000000046b4                _ZN7TwoWire5beginEv
  .text._ZN7TwoWire11requestFromEhhh
-                0x00000000000046f6       0x1e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x00000000000046f6                _ZN7TwoWire11requestFromEhhh
+                0x00000000000046ca       0x1e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x00000000000046ca                _ZN7TwoWire11requestFromEhhh
  .text._ZN7TwoWire11requestFromEii
-                0x0000000000004714        0x8 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x0000000000004714                _ZN7TwoWire11requestFromEii
+                0x00000000000046e8        0x8 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x00000000000046e8                _ZN7TwoWire11requestFromEii
  .text._ZN7TwoWire17beginTransmissionEh
-                0x000000000000471c       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x000000000000471c                _ZN7TwoWire17beginTransmissionEh
+                0x00000000000046f0       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x00000000000046f0                _ZN7TwoWire17beginTransmissionEh
  .text._ZN7TwoWire17beginTransmissionEi
-                0x000000000000472e        0x6 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x000000000000472e                _ZN7TwoWire17beginTransmissionEi
+                0x0000000000004702        0x6 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x0000000000004702                _ZN7TwoWire17beginTransmissionEi
  .text._ZN7TwoWire15endTransmissionEh
-                0x0000000000004734       0x24 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x0000000000004734                _ZN7TwoWire15endTransmissionEh
+                0x0000000000004708       0x24 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x0000000000004708                _ZN7TwoWire15endTransmissionEh
  .text._ZN7TwoWire15endTransmissionEv
-                0x0000000000004758        0x8 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x0000000000004758                _ZN7TwoWire15endTransmissionEv
+                0x000000000000472c        0x8 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x000000000000472c                _ZN7TwoWire15endTransmissionEv
  .text.startup._GLOBAL__sub_I__ZN7TwoWire8rxBufferE
-                0x0000000000004760        0xa /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x0000000000004734        0xa /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
  .text.twi_setClock
-                0x000000000000476a       0x78 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
-                0x000000000000476a                twi_setClock
+                0x000000000000473e       0x78 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
+                0x000000000000473e                twi_setClock
  .text.twi_init
-                0x00000000000047e2      0x102 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
-                0x00000000000047e2                twi_init
+                0x00000000000047b6      0x102 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
+                0x00000000000047b6                twi_init
  .text.twi_readFrom
-                0x00000000000048e4       0xc4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
-                0x00000000000048e4                twi_readFrom
+                0x00000000000048b8       0xc4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
+                0x00000000000048b8                twi_readFrom
  .text.twi_writeTo
-                0x00000000000049a8       0xba /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
-                0x00000000000049a8                twi_writeTo
+                0x000000000000497c       0xba /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
+                0x000000000000497c                twi_writeTo
  .text.twi_transmit
-                0x0000000000004a62       0x28 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
-                0x0000000000004a62                twi_transmit
+                0x0000000000004a36       0x28 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
+                0x0000000000004a36                twi_transmit
  .text.i2c_txrx_isr
-                0x0000000000004a8a      0x104 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
-                0x0000000000004a8a                i2c_txrx_isr
+                0x0000000000004a5e      0x104 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
+                0x0000000000004a5e                i2c_txrx_isr
  .text.i2c_state_isr
-                0x0000000000004b8e       0xc6 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
-                0x0000000000004b8e                i2c_state_isr
+                0x0000000000004b62       0xc6 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
+                0x0000000000004b62                i2c_state_isr
  .text.usci_isr_install
-                0x0000000000004c54        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x0000000000004c54                usci_isr_install
+                0x0000000000004c28        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x0000000000004c28                usci_isr_install
  .text.spi_rx_isr
-                0x0000000000004c56        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x0000000000004c56                spi_rx_isr
+                0x0000000000004c2a        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x0000000000004c2a                spi_rx_isr
  .text.spi_tx_isr
-                0x0000000000004c58        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x0000000000004c58                spi_tx_isr
+                0x0000000000004c2c        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x0000000000004c2c                spi_tx_isr
  .text.USCIA0_ISR
-                0x0000000000004c5a       0x38 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x0000000000004c5a                USCIA0_ISR
-                0x0000000000004c5a                __isr_56
+                0x0000000000004c2e       0x38 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x0000000000004c2e                USCIA0_ISR
+                0x0000000000004c2e                __isr_56
  .text.USCIA1_ISR
-                0x0000000000004c92       0x64 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x0000000000004c92                __isr_46
-                0x0000000000004c92                USCIA1_ISR
+                0x0000000000004c66       0x64 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x0000000000004c66                __isr_46
+                0x0000000000004c66                USCIA1_ISR
  .text.USCIB0_ISR
-                0x0000000000004cf6       0x54 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x0000000000004cf6                __isr_55
-                0x0000000000004cf6                USCIB0_ISR
+                0x0000000000004cca       0x54 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x0000000000004cca                __isr_55
+                0x0000000000004cca                USCIB0_ISR
  .text.USCIB1_ISR
-                0x0000000000004d4a       0x54 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x0000000000004d4a                USCIB1_ISR
-                0x0000000000004d4a                __isr_45
+                0x0000000000004d1e       0x54 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x0000000000004d1e                USCIB1_ISR
+                0x0000000000004d1e                __isr_45
  .text.enableXtal
-                0x0000000000004d9e       0x4a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000004d9e                enableXtal
+                0x0000000000004d72       0x4a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000000000004d72                enableXtal
  .text.enableWatchDogIntervalMode
-                0x0000000000004de8        0xc /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000004de8                enableWatchDogIntervalMode
+                0x0000000000004dbc        0xc /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000000000004dbc                enableWatchDogIntervalMode
  .text.initClocks
-                0x0000000000004df4       0xee /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000004df4                initClocks
- .text.init     0x0000000000004ee2       0x24 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000004ee2                init
- .text.micros   0x0000000000004f06       0x34 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000004f06                micros
- .text.millis   0x0000000000004f3a       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000004f3a                millis
- .text.sleepSeconds
-                0x0000000000004f4c       0xbe /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000004f4c                sleepSeconds
- .text.sleep    0x000000000000500a       0xde /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x000000000000500a                sleep
- .text.delay    0x00000000000050e8       0x3c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x00000000000050e8                delay
+                0x0000000000004dc8       0xee /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000000000004dc8                initClocks
+ .text.init     0x0000000000004eb6       0x24 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000000000004eb6                init
+ .text.micros   0x0000000000004eda       0x34 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000000000004eda                micros
+ .text.delay    0x0000000000004f0e       0x3c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000000000004f0e                delay
  .text.watchdog_isr
-                0x0000000000005124       0x72 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000005124                __isr_57
-                0x0000000000005124                watchdog_isr
- .text.pinMode  0x0000000000005196       0x6e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x0000000000005196                pinMode
+                0x0000000000004f4a       0x72 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000000000004f4a                __isr_57
+                0x0000000000004f4a                watchdog_isr
+ .text.pinMode  0x0000000000004fbc       0x6e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x0000000000004fbc                pinMode
  .text.pinMode_int
-                0x0000000000005204       0xf6 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x0000000000005204                pinMode_int
+                0x000000000000502a       0xf6 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x000000000000502a                pinMode_int
  .text.digitalRead
-                0x00000000000052fa       0x2e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x00000000000052fa                digitalRead
+                0x0000000000005120       0x2e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x0000000000005120                digitalRead
  .text.digitalWrite
-                0x0000000000005328       0x3e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x0000000000005328                digitalWrite
+                0x000000000000514e       0x3e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x000000000000514e                digitalWrite
  .text._ZN14HardwareSerial9availableEv
-                0x0000000000005366       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x0000000000005366                _ZN14HardwareSerial9availableEv
+                0x000000000000518c       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x000000000000518c                _ZN14HardwareSerial9availableEv
  .text._ZN14HardwareSerial4peekEv
-                0x0000000000005378       0x1e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x0000000000005378                _ZN14HardwareSerial4peekEv
+                0x000000000000519e       0x1e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x000000000000519e                _ZN14HardwareSerial4peekEv
  .text._ZN14HardwareSerial4readEv
-                0x0000000000005396       0x2c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x0000000000005396                _ZN14HardwareSerial4readEv
+                0x00000000000051bc       0x2c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00000000000051bc                _ZN14HardwareSerial4readEv
  .text._ZN14HardwareSerial5flushEv
-                0x00000000000053c2       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00000000000053c2                _ZN14HardwareSerial5flushEv
+                0x00000000000051e8       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00000000000051e8                _ZN14HardwareSerial5flushEv
  .text._ZN14HardwareSerial5writeEh
-                0x00000000000053d4       0x3c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00000000000053d4                _ZN14HardwareSerial5writeEh
+                0x00000000000051fa       0x3c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00000000000051fa                _ZN14HardwareSerial5writeEh
  .text._Z11serialEventv
-                0x0000000000005410        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x0000000000005410                _Z11serialEventv
+                0x0000000000005236        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x0000000000005236                _Z11serialEventv
  .text._Z12serialEvent1v
-                0x0000000000005412        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x0000000000005412                _Z12serialEvent1v
+                0x0000000000005238        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x0000000000005238                _Z12serialEvent1v
  .text._Z14serialEventRunv
-                0x0000000000005414       0x22 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x0000000000005414                _Z14serialEventRunv
+                0x000000000000523a       0x22 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x000000000000523a                _Z14serialEventRunv
  .text._ZN14HardwareSerial5beginEmh
-                0x0000000000005436      0x12e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x0000000000005436                _ZN14HardwareSerial5beginEmh
- .text._ZN14HardwareSerialcvbEv
-                0x0000000000005564        0x4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x0000000000005564                _ZN14HardwareSerialcvbEv
+                0x000000000000525c      0x12e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x000000000000525c                _ZN14HardwareSerial5beginEmh
  .text.uart_rx_isr
-                0x0000000000005568       0x38 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x0000000000005568                uart_rx_isr
+                0x000000000000538a       0x38 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x000000000000538a                uart_rx_isr
  .text.uart_tx_isr
-                0x00000000000055a0       0x52 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00000000000055a0                uart_tx_isr
+                0x00000000000053c2       0x52 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00000000000053c2                uart_tx_isr
  .text.startup._GLOBAL__sub_I_rx_buffer
-                0x00000000000055f2       0x8a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x0000000000005414       0x8a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
  .text._ZN5Print5writeEPKhj
-                0x000000000000567c       0x22 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x000000000000567c                _ZN5Print5writeEPKhj
+                0x000000000000549e       0x22 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x000000000000549e                _ZN5Print5writeEPKhj
  .text._ZN5Print5printEPKc
-                0x000000000000569e       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x000000000000569e                _ZN5Print5printEPKc
+                0x00000000000054c0       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00000000000054c0                _ZN5Print5printEPKc
  .text._ZN5Print5printEc
-                0x00000000000056b4        0x6 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x00000000000056b4                _ZN5Print5printEc
+                0x00000000000054d6        0x6 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00000000000054d6                _ZN5Print5printEc
  .text._ZN5Print7printlnEv
-                0x00000000000056ba       0x1e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x00000000000056ba                _ZN5Print7printlnEv
- .text._ZN5Print7printlnEPKc
-                0x00000000000056d8       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x00000000000056d8                _ZN5Print7printlnEPKc
+                0x00000000000054dc       0x1e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00000000000054dc                _ZN5Print7printlnEv
  .text._ZN5Print11printNumberEmh
-                0x00000000000056ee       0x8a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x00000000000056ee                _ZN5Print11printNumberEmh
+                0x00000000000054fa       0x8a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00000000000054fa                _ZN5Print11printNumberEmh
  .text._ZN5Print5printEli
-                0x0000000000005778       0x50 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x0000000000005778                _ZN5Print5printEli
+                0x0000000000005584       0x50 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x0000000000005584                _ZN5Print5printEli
  .text._ZN5Print5printEii
-                0x00000000000057c8       0x18 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x00000000000057c8                _ZN5Print5printEii
+                0x00000000000055d4       0x18 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00000000000055d4                _ZN5Print5printEii
  .text._ZN5Print7printlnEii
-                0x00000000000057e0       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x00000000000057e0                _ZN5Print7printlnEii
- .text.libgcc   0x00000000000057f6       0x22 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod16.o)
-                0x00000000000057f6                __udivhi3
-                0x00000000000057f6                __ext_udivmod16
-                0x0000000000005810                __umodhi3
- .text.libgcc   0x0000000000005818       0x38 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod32.o)
-                0x0000000000005818                __udivsi3
-                0x0000000000005818                __ext_udivmod32
-                0x0000000000005846                __umodsi3
- .text.crt0     0x0000000000005850        0x2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_unexpected_.o)
-                0x0000000000005850                _unexpected_
-                0x0000000000005852                . = ALIGN (0x2)
+                0x00000000000055ec       0x16 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00000000000055ec                _ZN5Print7printlnEii
+ .text.libgcc   0x0000000000005602       0x38 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod32.o)
+                0x0000000000005602                __udivsi3
+                0x0000000000005602                __ext_udivmod32
+                0x0000000000005630                __umodsi3
+ .text.crt0     0x000000000000563a        0x2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_unexpected_.o)
+                0x000000000000563a                _unexpected_
+                0x000000000000563c                . = ALIGN (0x2)
 
-.rodata         0x0000000000005852      0x10a
-                0x0000000000005852                . = ALIGN (0x2)
+.rodata         0x000000000000563c       0xfc
+                0x000000000000563c                . = ALIGN (0x2)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata.setup  0x0000000000005852        0xd ./Satellitt Design ADCS.o
- .rodata.loop   0x000000000000585f       0x10 ./Satellitt Design ADCS.o
- *fill*         0x000000000000586f        0x1 00
+ .rodata.loop   0x000000000000563c       0x10 ./Satellitt Design ADCS.o
  .rodata._ZTV7TwoWire
-                0x0000000000005870       0x10 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
-                0x0000000000005870                _ZTV7TwoWire
+                0x000000000000564c       0x10 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+                0x000000000000564c                _ZTV7TwoWire
  .rodata.digital_pin_to_bit_mask
-                0x0000000000005880       0x2f /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x0000000000005880                digital_pin_to_bit_mask
+                0x000000000000565c       0x2f /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x000000000000565c                digital_pin_to_bit_mask
  .rodata.digital_pin_to_port
-                0x00000000000058af       0x2f /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x00000000000058af                digital_pin_to_port
+                0x000000000000568b       0x2f /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x000000000000568b                digital_pin_to_port
  .rodata.port_to_pmap
-                0x00000000000058de       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x00000000000058de                port_to_pmap
+                0x00000000000056ba       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x00000000000056ba                port_to_pmap
  .rodata.port_to_sel0
-                0x00000000000058f0       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x00000000000058f0                port_to_sel0
+                0x00000000000056cc       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x00000000000056cc                port_to_sel0
  .rodata.port_to_ren
-                0x0000000000005902       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x0000000000005902                port_to_ren
+                0x00000000000056de       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x00000000000056de                port_to_ren
  .rodata.port_to_dir
-                0x0000000000005914       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x0000000000005914                port_to_dir
+                0x00000000000056f0       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x00000000000056f0                port_to_dir
  .rodata.port_to_output
-                0x0000000000005926       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x0000000000005926                port_to_output
+                0x0000000000005702       0x12 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x0000000000005702                port_to_output
  .rodata.port_to_input
-                0x0000000000005938       0x14 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x0000000000005938                port_to_input
+                0x0000000000005714       0x14 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x0000000000005714                port_to_input
  .rodata._ZTV14HardwareSerial
-                0x000000000000594c       0x10 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x000000000000594c                _ZTV14HardwareSerial
-                0x000000000000595c                . = ALIGN (0x2)
-                0x000000000000595c                _etext = .
+                0x0000000000005728       0x10 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x0000000000005728                _ZTV14HardwareSerial
+                0x0000000000005738                . = ALIGN (0x2)
+                0x0000000000005738                _etext = .
 
-.data           0x0000000000002400        0x2 load address 0x000000000000595c
+.data           0x0000000000002400        0x2 load address 0x0000000000005738
                 0x0000000000002400                . = ALIGN (0x2)
                 0x0000000000002400                PROVIDE (__data_start, .)
  *(.data .data.* .gnu.linkonce.d.*)
@@ -1830,10 +1821,10 @@ LOAD /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/
                 0x0000000000002400                I2C_baseAddress
                 0x0000000000002402                . = ALIGN (0x2)
                 0x0000000000002402                _edata = .
-                0x000000000000595c                PROVIDE (__data_load_start, LOADADDR (.data))
+                0x0000000000005738                PROVIDE (__data_load_start, LOADADDR (.data))
                 0x0000000000000002                PROVIDE (__data_size, SIZEOF (.data))
 
-.bss            0x0000000000002402      0x108 load address 0x000000000000595e
+.bss            0x0000000000002402      0x106 load address 0x000000000000573a
                 0x0000000000002402                PROVIDE (__bss_start, .)
  *(.bss .bss.*)
  .bss.Wire      0x0000000000002402        0xc /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
@@ -1893,56 +1884,54 @@ LOAD /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/
                 0x0000000000002462       0x10 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
  .bss.still_asleep
                 0x0000000000002472        0x1 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
- *fill*         0x0000000000002473        0x1 00
- .bss.vlo_freq  0x0000000000002474        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000002474                vlo_freq
  .bss.stay_asleep
-                0x0000000000002476        0x1 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000002476                stay_asleep
- .bss.sleeping  0x0000000000002477        0x1 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000002477                sleeping
+                0x0000000000002473        0x1 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000000000002473                stay_asleep
+ .bss.sleeping  0x0000000000002474        0x1 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000000000002474                sleeping
+ *fill*         0x0000000000002475        0x1 00
  .bss.wdt_fract
-                0x0000000000002478        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000002478                wdt_fract
+                0x0000000000002476        0x2 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000000000002476                wdt_fract
  .bss.wdt_millis
-                0x000000000000247a        0x4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x000000000000247a                wdt_millis
+                0x0000000000002478        0x4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000000000002478                wdt_millis
  .bss.wdt_overflow_count
-                0x000000000000247e        0x4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x000000000000247e                wdt_overflow_count
- .bss.Serial1   0x0000000000002482       0x1a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x0000000000002482                Serial1
- .bss.Serial    0x000000000000249c       0x1a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x000000000000249c                Serial
+                0x000000000000247c        0x4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x000000000000247c                wdt_overflow_count
+ .bss.Serial1   0x0000000000002480       0x1a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x0000000000002480                Serial1
+ .bss.Serial    0x000000000000249a       0x1a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x000000000000249a                Serial
  .bss.tx_buffer1
-                0x00000000000024b6       0x14 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00000000000024b6                tx_buffer1
+                0x00000000000024b4       0x14 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00000000000024b4                tx_buffer1
  .bss.rx_buffer1
-                0x00000000000024ca       0x14 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00000000000024ca                rx_buffer1
+                0x00000000000024c8       0x14 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00000000000024c8                rx_buffer1
  .bss.tx_buffer
-                0x00000000000024de       0x14 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00000000000024de                tx_buffer
+                0x00000000000024dc       0x14 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00000000000024dc                tx_buffer
  .bss.rx_buffer
-                0x00000000000024f2       0x14 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00000000000024f2                rx_buffer
+                0x00000000000024f0       0x14 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00000000000024f0                rx_buffer
  *(COMMON)
- COMMON         0x0000000000002506        0x4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000000000002506                SMILLIS_INC
-                0x0000000000002508                SFRACT_INC
-                0x000000000000250a                . = ALIGN (0x2)
-                0x000000000000250a                PROVIDE (__bss_end, .)
-                0x0000000000000108                PROVIDE (__bss_size, SIZEOF (.bss))
+ COMMON         0x0000000000002504        0x4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000000000002504                SMILLIS_INC
+                0x0000000000002506                SFRACT_INC
+                0x0000000000002508                . = ALIGN (0x2)
+                0x0000000000002508                PROVIDE (__bss_end, .)
+                0x0000000000000106                PROVIDE (__bss_size, SIZEOF (.bss))
 
-.noinit         0x000000000000250a        0x2 load address 0x000000000000595e
-                0x000000000000250a                PROVIDE (__noinit_start, .)
+.noinit         0x0000000000002508        0x2 load address 0x000000000000573a
+                0x0000000000002508                PROVIDE (__noinit_start, .)
  *(.noinit .noinit.*)
- .noinit.crt0   0x000000000000250a        0x2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(__watchdog_support.o)
-                0x000000000000250a                __wdt_clear_value
-                0x000000000000250c                . = ALIGN (0x2)
-                0x000000000000250c                PROVIDE (__noinit_end, .)
-                0x000000000000250c                . = ALIGN (0x2)
-                0x000000000000250c                _end = .
+ .noinit.crt0   0x0000000000002508        0x2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(__watchdog_support.o)
+                0x0000000000002508                __wdt_clear_value
+                0x000000000000250a                . = ALIGN (0x2)
+                0x000000000000250a                PROVIDE (__noinit_end, .)
+                0x000000000000250a                . = ALIGN (0x2)
+                0x000000000000250a                _end = .
 
 .infomem        0x0000000000001800        0x0
  *(.infomem)
@@ -2138,69 +2127,69 @@ LOAD /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000    0x104b3
+.debug_info     0x0000000000000000    0x104a4
  *(.debug_info)
- .debug_info    0x0000000000000000      0x5ac ./Satellitt Design ADCS.o
- .debug_info    0x00000000000005ac     0x2184 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
- .debug_info    0x0000000000002730      0x783 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
- .debug_info    0x0000000000002eb3      0x56a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
- .debug_info    0x000000000000341d      0x80f /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
- .debug_info    0x0000000000003c2c      0xa32 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
- .debug_info    0x000000000000465e     0x1fe4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
- .debug_info    0x0000000000006642      0x408 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(main.o)
- .debug_info    0x0000000000006a4a      0x190 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(new.o)
- .debug_info    0x0000000000006bda     0x206c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
- .debug_info    0x0000000000008c46     0x2b11 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
- .debug_info    0x000000000000b757       0xd8 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
- .debug_info    0x000000000000b82f      0x124 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
- .debug_info    0x000000000000b953      0x221 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
- .debug_info    0x000000000000bb74      0x5ea /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_pow.o)
- .debug_info    0x000000000000c15e      0x1e4 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(sf_scalbn.o)
- .debug_info    0x000000000000c342      0x208 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_sqrt.o)
- .debug_info    0x000000000000c54a       0xa2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod16.o)
- .debug_info    0x000000000000c5ec       0xa2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod32.o)
- .debug_info    0x000000000000c68e       0xb5 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fixunssfsi.o)
- .debug_info    0x000000000000c743      0x425 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_addsub_sf.o)
- .debug_info    0x000000000000cb68      0x3c9 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_mul_sf.o)
- .debug_info    0x000000000000cf31      0x35c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_div_sf.o)
- .debug_info    0x000000000000d28d      0x26e /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_gt_sf.o)
- .debug_info    0x000000000000d4fb      0x26e /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_ge_sf.o)
- .debug_info    0x000000000000d769      0x26e /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_lt_sf.o)
- .debug_info    0x000000000000d9d7      0x26e /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_le_sf.o)
- .debug_info    0x000000000000dc45      0x20b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_si_to_sf.o)
- .debug_info    0x000000000000de50      0x289 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_sf_to_si.o)
- .debug_info    0x000000000000e0d9      0x144 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_thenan_sf.o)
- .debug_info    0x000000000000e21d      0x206 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_usi_to_sf.o)
- .debug_info    0x000000000000e423      0x109 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clzsi2.o)
- .debug_info    0x000000000000e52c      0x2b1 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_pack_sf.o)
- .debug_info    0x000000000000e7dd      0x23e /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_unpack_sf.o)
- .debug_info    0x000000000000ea1b      0x1d5 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fpcmp_parts_sf.o)
- .debug_info    0x000000000000ebf0       0xa0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clz.o)
- .debug_info    0x000000000000ec90       0xa7 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strchr.o)
- .debug_info    0x000000000000ed37       0xa4 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcmp.o)
- .debug_info    0x000000000000eddb       0xbb /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncmp.o)
- .debug_info    0x000000000000ee96       0xb6 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcpy.o)
- .debug_info    0x000000000000ef4c       0xe1 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncpy.o)
- .debug_info    0x000000000000f02d      0x111 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
- .debug_info    0x000000000000f13e      0x111 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memmove.o)
- .debug_info    0x000000000000f24f       0xb7 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strrchr.o)
- .debug_info    0x000000000000f306       0xe0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strstr.o)
- .debug_info    0x000000000000f3e6       0x95 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(atol.o)
- .debug_info    0x000000000000f47b      0x14f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(malloc.o)
- .debug_info    0x000000000000f5ca      0x1d7 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strtol.o)
- .debug_info    0x000000000000f7a1      0x277 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(sprintf.o)
- .debug_info    0x000000000000fa18      0x565 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(vuprintf.o)
- .debug_info    0x000000000000ff7d       0x39 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(errno.o)
- .debug_info    0x000000000000ffb6       0xa2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_mulsi3.o)
- .debug_info    0x0000000000010058       0xa2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_divmod32.o)
- .debug_info    0x00000000000100fa       0xa2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod64.o)
- .debug_info    0x000000000001019c       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(__watchdog_support.o)
- .debug_info    0x000000000001020d       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(__init_stack.o)
- .debug_info    0x000000000001027e       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_copy_data.o)
- .debug_info    0x00000000000102ef       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_clear_bss.o)
- .debug_info    0x0000000000010360       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_endless_loop__.o)
- .debug_info    0x00000000000103d1       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_unexpected_.o)
- .debug_info    0x0000000000010442       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_ctors430.o)
+ .debug_info    0x0000000000000000      0x59d ./Satellitt Design ADCS.o
+ .debug_info    0x000000000000059d     0x2184 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+ .debug_info    0x0000000000002721      0x783 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
+ .debug_info    0x0000000000002ea4      0x56a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+ .debug_info    0x000000000000340e      0x80f /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .debug_info    0x0000000000003c1d      0xa32 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+ .debug_info    0x000000000000464f     0x1fe4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+ .debug_info    0x0000000000006633      0x408 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(main.o)
+ .debug_info    0x0000000000006a3b      0x190 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(new.o)
+ .debug_info    0x0000000000006bcb     0x206c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+ .debug_info    0x0000000000008c37     0x2b11 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
+ .debug_info    0x000000000000b748       0xd8 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
+ .debug_info    0x000000000000b820      0x124 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
+ .debug_info    0x000000000000b944      0x221 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
+ .debug_info    0x000000000000bb65      0x5ea /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_pow.o)
+ .debug_info    0x000000000000c14f      0x1e4 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(sf_scalbn.o)
+ .debug_info    0x000000000000c333      0x208 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_sqrt.o)
+ .debug_info    0x000000000000c53b       0xa2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod16.o)
+ .debug_info    0x000000000000c5dd       0xa2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod32.o)
+ .debug_info    0x000000000000c67f       0xb5 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fixunssfsi.o)
+ .debug_info    0x000000000000c734      0x425 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_addsub_sf.o)
+ .debug_info    0x000000000000cb59      0x3c9 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_mul_sf.o)
+ .debug_info    0x000000000000cf22      0x35c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_div_sf.o)
+ .debug_info    0x000000000000d27e      0x26e /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_gt_sf.o)
+ .debug_info    0x000000000000d4ec      0x26e /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_ge_sf.o)
+ .debug_info    0x000000000000d75a      0x26e /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_lt_sf.o)
+ .debug_info    0x000000000000d9c8      0x26e /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_le_sf.o)
+ .debug_info    0x000000000000dc36      0x20b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_si_to_sf.o)
+ .debug_info    0x000000000000de41      0x289 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_sf_to_si.o)
+ .debug_info    0x000000000000e0ca      0x144 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_thenan_sf.o)
+ .debug_info    0x000000000000e20e      0x206 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_usi_to_sf.o)
+ .debug_info    0x000000000000e414      0x109 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clzsi2.o)
+ .debug_info    0x000000000000e51d      0x2b1 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_pack_sf.o)
+ .debug_info    0x000000000000e7ce      0x23e /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_unpack_sf.o)
+ .debug_info    0x000000000000ea0c      0x1d5 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_info    0x000000000000ebe1       0xa0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clz.o)
+ .debug_info    0x000000000000ec81       0xa7 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strchr.o)
+ .debug_info    0x000000000000ed28       0xa4 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcmp.o)
+ .debug_info    0x000000000000edcc       0xbb /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncmp.o)
+ .debug_info    0x000000000000ee87       0xb6 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcpy.o)
+ .debug_info    0x000000000000ef3d       0xe1 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncpy.o)
+ .debug_info    0x000000000000f01e      0x111 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .debug_info    0x000000000000f12f      0x111 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memmove.o)
+ .debug_info    0x000000000000f240       0xb7 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strrchr.o)
+ .debug_info    0x000000000000f2f7       0xe0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strstr.o)
+ .debug_info    0x000000000000f3d7       0x95 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(atol.o)
+ .debug_info    0x000000000000f46c      0x14f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(malloc.o)
+ .debug_info    0x000000000000f5bb      0x1d7 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strtol.o)
+ .debug_info    0x000000000000f792      0x277 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(sprintf.o)
+ .debug_info    0x000000000000fa09      0x565 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(vuprintf.o)
+ .debug_info    0x000000000000ff6e       0x39 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(errno.o)
+ .debug_info    0x000000000000ffa7       0xa2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_mulsi3.o)
+ .debug_info    0x0000000000010049       0xa2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_divmod32.o)
+ .debug_info    0x00000000000100eb       0xa2 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod64.o)
+ .debug_info    0x000000000001018d       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(__watchdog_support.o)
+ .debug_info    0x00000000000101fe       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(__init_stack.o)
+ .debug_info    0x000000000001026f       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_copy_data.o)
+ .debug_info    0x00000000000102e0       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_clear_bss.o)
+ .debug_info    0x0000000000010351       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_endless_loop__.o)
+ .debug_info    0x00000000000103c2       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_unexpected_.o)
+ .debug_info    0x0000000000010433       0x71 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_ctors430.o)
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev   0x0000000000000000     0x3f0a
@@ -2267,69 +2256,69 @@ LOAD /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/
  .debug_abbrev  0x0000000000003ee2       0x14 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_unexpected_.o)
  .debug_abbrev  0x0000000000003ef6       0x14 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_ctors430.o)
 
-.debug_line     0x0000000000000000     0x447f
+.debug_line     0x0000000000000000     0x447c
  *(.debug_line)
- .debug_line    0x0000000000000000      0x2cf ./Satellitt Design ADCS.o
- .debug_line    0x00000000000002cf      0x3e8 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
- .debug_line    0x00000000000006b7      0x30a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
- .debug_line    0x00000000000009c1      0x23e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
- .debug_line    0x0000000000000bff      0x2fb /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
- .debug_line    0x0000000000000efa      0x217 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
- .debug_line    0x0000000000001111      0x36e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
- .debug_line    0x000000000000147f      0x170 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(main.o)
- .debug_line    0x00000000000015ef      0x158 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(new.o)
- .debug_line    0x0000000000001747      0x3e4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
- .debug_line    0x0000000000001b2b      0x7f0 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
- .debug_line    0x000000000000231b       0xda /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
- .debug_line    0x00000000000023f5      0x112 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
- .debug_line    0x0000000000002507       0xf4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
- .debug_line    0x00000000000025fb      0x1c3 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_pow.o)
- .debug_line    0x00000000000027be       0x97 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(sf_scalbn.o)
- .debug_line    0x0000000000002855       0xb5 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_sqrt.o)
- .debug_line    0x000000000000290a       0x77 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod16.o)
- .debug_line    0x0000000000002981       0x82 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod32.o)
- .debug_line    0x0000000000002a03       0x6f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fixunssfsi.o)
- .debug_line    0x0000000000002a72      0x11e /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_addsub_sf.o)
- .debug_line    0x0000000000002b90      0x117 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_mul_sf.o)
- .debug_line    0x0000000000002ca7       0xd9 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_div_sf.o)
- .debug_line    0x0000000000002d80       0x8f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_gt_sf.o)
- .debug_line    0x0000000000002e0f       0x8f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_ge_sf.o)
- .debug_line    0x0000000000002e9e       0x8f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_lt_sf.o)
- .debug_line    0x0000000000002f2d       0x8f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_le_sf.o)
- .debug_line    0x0000000000002fbc       0xa7 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_si_to_sf.o)
- .debug_line    0x0000000000003063       0x9d /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_sf_to_si.o)
- .debug_line    0x0000000000003100       0x72 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_thenan_sf.o)
- .debug_line    0x0000000000003172       0xa6 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_usi_to_sf.o)
- .debug_line    0x0000000000003218       0x99 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clzsi2.o)
- .debug_line    0x00000000000032b1       0xdf /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_pack_sf.o)
- .debug_line    0x0000000000003390       0xbb /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_unpack_sf.o)
- .debug_line    0x000000000000344b       0xc6 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fpcmp_parts_sf.o)
- .debug_line    0x0000000000003511       0x5b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clz.o)
- .debug_line    0x000000000000356c       0x44 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strchr.o)
- .debug_line    0x00000000000035b0       0x49 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcmp.o)
- .debug_line    0x00000000000035f9       0x95 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncmp.o)
- .debug_line    0x000000000000368e       0x4d /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcpy.o)
- .debug_line    0x00000000000036db       0x98 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncpy.o)
- .debug_line    0x0000000000003773      0x109 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
- .debug_line    0x000000000000387c      0x109 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memmove.o)
- .debug_line    0x0000000000003985       0x47 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strrchr.o)
- .debug_line    0x00000000000039cc       0x99 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strstr.o)
- .debug_line    0x0000000000003a65       0x3d /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(atol.o)
- .debug_line    0x0000000000003aa2       0xe0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(malloc.o)
- .debug_line    0x0000000000003b82      0x10a /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strtol.o)
- .debug_line    0x0000000000003c8c       0xbc /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(sprintf.o)
- .debug_line    0x0000000000003d48      0x2ee /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(vuprintf.o)
- .debug_line    0x0000000000004036       0x31 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(errno.o)
- .debug_line    0x0000000000004067       0x7d /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_mulsi3.o)
- .debug_line    0x00000000000040e4       0x8b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_divmod32.o)
- .debug_line    0x000000000000416f       0xb0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod64.o)
- .debug_line    0x000000000000421f       0x56 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(__watchdog_support.o)
- .debug_line    0x0000000000004275       0x54 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(__init_stack.o)
- .debug_line    0x00000000000042c9       0x5a /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_copy_data.o)
- .debug_line    0x0000000000004323       0x5a /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_clear_bss.o)
- .debug_line    0x000000000000437d       0x55 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_endless_loop__.o)
- .debug_line    0x00000000000043d2       0x54 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_unexpected_.o)
- .debug_line    0x0000000000004426       0x59 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_ctors430.o)
+ .debug_line    0x0000000000000000      0x2cc ./Satellitt Design ADCS.o
+ .debug_line    0x00000000000002cc      0x3e8 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+ .debug_line    0x00000000000006b4      0x30a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
+ .debug_line    0x00000000000009be      0x23e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+ .debug_line    0x0000000000000bfc      0x2fb /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .debug_line    0x0000000000000ef7      0x217 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+ .debug_line    0x000000000000110e      0x36e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+ .debug_line    0x000000000000147c      0x170 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(main.o)
+ .debug_line    0x00000000000015ec      0x158 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(new.o)
+ .debug_line    0x0000000000001744      0x3e4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+ .debug_line    0x0000000000001b28      0x7f0 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
+ .debug_line    0x0000000000002318       0xda /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
+ .debug_line    0x00000000000023f2      0x112 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
+ .debug_line    0x0000000000002504       0xf4 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
+ .debug_line    0x00000000000025f8      0x1c3 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_pow.o)
+ .debug_line    0x00000000000027bb       0x97 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(sf_scalbn.o)
+ .debug_line    0x0000000000002852       0xb5 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_sqrt.o)
+ .debug_line    0x0000000000002907       0x77 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod16.o)
+ .debug_line    0x000000000000297e       0x82 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod32.o)
+ .debug_line    0x0000000000002a00       0x6f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fixunssfsi.o)
+ .debug_line    0x0000000000002a6f      0x11e /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_addsub_sf.o)
+ .debug_line    0x0000000000002b8d      0x117 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_mul_sf.o)
+ .debug_line    0x0000000000002ca4       0xd9 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_div_sf.o)
+ .debug_line    0x0000000000002d7d       0x8f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_gt_sf.o)
+ .debug_line    0x0000000000002e0c       0x8f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_ge_sf.o)
+ .debug_line    0x0000000000002e9b       0x8f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_lt_sf.o)
+ .debug_line    0x0000000000002f2a       0x8f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_le_sf.o)
+ .debug_line    0x0000000000002fb9       0xa7 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_si_to_sf.o)
+ .debug_line    0x0000000000003060       0x9d /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_sf_to_si.o)
+ .debug_line    0x00000000000030fd       0x72 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_thenan_sf.o)
+ .debug_line    0x000000000000316f       0xa6 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_usi_to_sf.o)
+ .debug_line    0x0000000000003215       0x99 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clzsi2.o)
+ .debug_line    0x00000000000032ae       0xdf /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_pack_sf.o)
+ .debug_line    0x000000000000338d       0xbb /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_unpack_sf.o)
+ .debug_line    0x0000000000003448       0xc6 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_line    0x000000000000350e       0x5b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clz.o)
+ .debug_line    0x0000000000003569       0x44 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strchr.o)
+ .debug_line    0x00000000000035ad       0x49 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcmp.o)
+ .debug_line    0x00000000000035f6       0x95 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncmp.o)
+ .debug_line    0x000000000000368b       0x4d /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcpy.o)
+ .debug_line    0x00000000000036d8       0x98 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncpy.o)
+ .debug_line    0x0000000000003770      0x109 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .debug_line    0x0000000000003879      0x109 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memmove.o)
+ .debug_line    0x0000000000003982       0x47 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strrchr.o)
+ .debug_line    0x00000000000039c9       0x99 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strstr.o)
+ .debug_line    0x0000000000003a62       0x3d /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(atol.o)
+ .debug_line    0x0000000000003a9f       0xe0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(malloc.o)
+ .debug_line    0x0000000000003b7f      0x10a /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strtol.o)
+ .debug_line    0x0000000000003c89       0xbc /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(sprintf.o)
+ .debug_line    0x0000000000003d45      0x2ee /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(vuprintf.o)
+ .debug_line    0x0000000000004033       0x31 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(errno.o)
+ .debug_line    0x0000000000004064       0x7d /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_mulsi3.o)
+ .debug_line    0x00000000000040e1       0x8b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_divmod32.o)
+ .debug_line    0x000000000000416c       0xb0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod64.o)
+ .debug_line    0x000000000000421c       0x56 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(__watchdog_support.o)
+ .debug_line    0x0000000000004272       0x54 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(__init_stack.o)
+ .debug_line    0x00000000000042c6       0x5a /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_copy_data.o)
+ .debug_line    0x0000000000004320       0x5a /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_clear_bss.o)
+ .debug_line    0x000000000000437a       0x55 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_endless_loop__.o)
+ .debug_line    0x00000000000043cf       0x54 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_unexpected_.o)
+ .debug_line    0x0000000000004423       0x59 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_ctors430.o)
 
 .debug_frame    0x0000000000000000     0x169a
  *(.debug_frame)
@@ -2380,151 +2369,151 @@ LOAD /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/
  .debug_frame   0x00000000000015b2       0x64 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(sprintf.o)
  .debug_frame   0x0000000000001616       0x84 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(vuprintf.o)
 
-.debug_str      0x0000000000000000     0x3416
+.debug_str      0x0000000000000000     0x340f
  *(.debug_str)
- .debug_str     0x0000000000000000      0x2d6 ./Satellitt Design ADCS.o
-                                        0x326 (size before relaxing)
- .debug_str     0x00000000000002d6     0x1293 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+ .debug_str     0x0000000000000000      0x2cf ./Satellitt Design ADCS.o
+                                        0x31f (size before relaxing)
+ .debug_str     0x00000000000002cf     0x1293 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
                                        0x1479 (size before relaxing)
- .debug_str     0x0000000000001569      0x267 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
+ .debug_str     0x0000000000001562      0x267 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
                                         0x49b (size before relaxing)
- .debug_str     0x00000000000017d0      0x13f /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+ .debug_str     0x00000000000017c9      0x13f /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
                                         0x3ca (size before relaxing)
- .debug_str     0x000000000000190f      0x21f /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .debug_str     0x0000000000001908      0x21f /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
                                         0x52e (size before relaxing)
- .debug_str     0x0000000000001b2e      0x4e5 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+ .debug_str     0x0000000000001b27      0x4e5 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
                                         0x72f (size before relaxing)
- .debug_str     0x0000000000002013      0x345 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+ .debug_str     0x000000000000200c      0x345 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
                                        0x13a1 (size before relaxing)
- .debug_str     0x0000000000002358       0x59 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(main.o)
+ .debug_str     0x0000000000002351       0x59 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(main.o)
                                         0x2c3 (size before relaxing)
- .debug_str     0x00000000000023b1      0x102 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(new.o)
+ .debug_str     0x00000000000023aa      0x102 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(new.o)
                                         0x1c4 (size before relaxing)
- .debug_str     0x00000000000024b3      0x381 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+ .debug_str     0x00000000000024ac      0x381 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
                                         0xfa2 (size before relaxing)
- .debug_str     0x0000000000002834      0x24e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
+ .debug_str     0x000000000000282d      0x24e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
                                         0xc99 (size before relaxing)
- .debug_str     0x0000000000002a82       0x6e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
+ .debug_str     0x0000000000002a7b       0x6e /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
                                          0xc7 (size before relaxing)
- .debug_str     0x0000000000002af0       0x7a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
+ .debug_str     0x0000000000002ae9       0x7a /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
                                         0x158 (size before relaxing)
- .debug_str     0x0000000000002b6a       0x68 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
+ .debug_str     0x0000000000002b63       0x68 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
                                         0x133 (size before relaxing)
- .debug_str     0x0000000000002bd2       0xd8 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_pow.o)
+ .debug_str     0x0000000000002bcb       0xd8 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_pow.o)
                                         0x199 (size before relaxing)
- .debug_str     0x0000000000002caa       0x2f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(sf_scalbn.o)
+ .debug_str     0x0000000000002ca3       0x2f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(sf_scalbn.o)
                                         0x15c (size before relaxing)
- .debug_str     0x0000000000002cd9       0x26 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_sqrt.o)
+ .debug_str     0x0000000000002cd2       0x26 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_sqrt.o)
                                         0x154 (size before relaxing)
- .debug_str     0x0000000000002cff       0x9b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fixunssfsi.o)
+ .debug_str     0x0000000000002cf8       0x9b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fixunssfsi.o)
                                         0x149 (size before relaxing)
- .debug_str     0x0000000000002d9a      0x143 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_addsub_sf.o)
+ .debug_str     0x0000000000002d93      0x143 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_addsub_sf.o)
                                         0x249 (size before relaxing)
- .debug_str     0x0000000000002edd       0x27 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_mul_sf.o)
+ .debug_str     0x0000000000002ed6       0x27 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_mul_sf.o)
                                         0x202 (size before relaxing)
- .debug_str     0x0000000000002f04       0x35 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_div_sf.o)
+ .debug_str     0x0000000000002efd       0x35 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_div_sf.o)
                                         0x20b (size before relaxing)
- .debug_str     0x0000000000002f39        0x8 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_gt_sf.o)
+ .debug_str     0x0000000000002f32        0x8 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_gt_sf.o)
                                         0x1d0 (size before relaxing)
- .debug_str     0x0000000000002f41        0x8 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_ge_sf.o)
+ .debug_str     0x0000000000002f3a        0x8 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_ge_sf.o)
                                         0x1d0 (size before relaxing)
- .debug_str     0x0000000000002f49        0x8 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_lt_sf.o)
+ .debug_str     0x0000000000002f42        0x8 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_lt_sf.o)
                                         0x1d0 (size before relaxing)
- .debug_str     0x0000000000002f51        0x8 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_le_sf.o)
+ .debug_str     0x0000000000002f4a        0x8 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_le_sf.o)
                                         0x1d0 (size before relaxing)
- .debug_str     0x0000000000002f59       0x27 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_si_to_sf.o)
+ .debug_str     0x0000000000002f52       0x27 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_si_to_sf.o)
                                         0x1bf (size before relaxing)
- .debug_str     0x0000000000002f80        0xa /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_sf_to_si.o)
+ .debug_str     0x0000000000002f79        0xa /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_sf_to_si.o)
                                         0x1d9 (size before relaxing)
  .debug_str     0x0000000000000000      0x17b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_thenan_sf.o)
- .debug_str     0x0000000000002f8a        0xe /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_usi_to_sf.o)
+ .debug_str     0x0000000000002f83        0xe /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_usi_to_sf.o)
                                         0x1bb (size before relaxing)
- .debug_str     0x0000000000002f98       0x17 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clzsi2.o)
+ .debug_str     0x0000000000002f91       0x17 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clzsi2.o)
                                         0x155 (size before relaxing)
- .debug_str     0x0000000000002faf       0x10 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_pack_sf.o)
+ .debug_str     0x0000000000002fa8       0x10 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_pack_sf.o)
                                         0x1d8 (size before relaxing)
- .debug_str     0x0000000000002fbf        0xb /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_unpack_sf.o)
+ .debug_str     0x0000000000002fb8        0xb /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_unpack_sf.o)
                                         0x1ba (size before relaxing)
- .debug_str     0x0000000000002fca       0x10 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_str     0x0000000000002fc3       0x10 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fpcmp_parts_sf.o)
                                         0x19e (size before relaxing)
  .debug_str     0x0000000000000000      0x138 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clz.o)
- .debug_str     0x0000000000002fda       0x19 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strchr.o)
+ .debug_str     0x0000000000002fd3       0x19 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strchr.o)
                                          0xff (size before relaxing)
- .debug_str     0x0000000000002ff3       0x19 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcmp.o)
+ .debug_str     0x0000000000002fec       0x19 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcmp.o)
                                          0xff (size before relaxing)
- .debug_str     0x000000000000300c       0x1b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncmp.o)
+ .debug_str     0x0000000000003005       0x1b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncmp.o)
                                         0x108 (size before relaxing)
- .debug_str     0x0000000000003027       0x23 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcpy.o)
+ .debug_str     0x0000000000003020       0x23 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcpy.o)
                                         0x109 (size before relaxing)
- .debug_str     0x000000000000304a       0x1b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncpy.o)
+ .debug_str     0x0000000000003043       0x1b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncpy.o)
                                         0x108 (size before relaxing)
- .debug_str     0x0000000000003065       0x28 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .debug_str     0x000000000000305e       0x28 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
                                         0x121 (size before relaxing)
- .debug_str     0x000000000000308d       0x1b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memmove.o)
+ .debug_str     0x0000000000003086       0x1b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memmove.o)
                                         0x123 (size before relaxing)
- .debug_str     0x00000000000030a8       0x1b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strrchr.o)
+ .debug_str     0x00000000000030a1       0x1b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strrchr.o)
                                         0x106 (size before relaxing)
- .debug_str     0x00000000000030c3       0x19 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strstr.o)
+ .debug_str     0x00000000000030bc       0x19 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strstr.o)
                                         0x10b (size before relaxing)
- .debug_str     0x00000000000030dc       0x15 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(atol.o)
+ .debug_str     0x00000000000030d5       0x15 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(atol.o)
                                          0xfb (size before relaxing)
- .debug_str     0x00000000000030f1       0x55 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(malloc.o)
+ .debug_str     0x00000000000030ea       0x55 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(malloc.o)
                                         0x147 (size before relaxing)
- .debug_str     0x0000000000003146       0x47 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strtol.o)
+ .debug_str     0x000000000000313f       0x47 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strtol.o)
                                         0x13a (size before relaxing)
- .debug_str     0x000000000000318d       0x85 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(sprintf.o)
+ .debug_str     0x0000000000003186       0x85 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(sprintf.o)
                                         0x19a (size before relaxing)
- .debug_str     0x0000000000003212      0x1f3 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(vuprintf.o)
+ .debug_str     0x000000000000320b      0x1f3 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(vuprintf.o)
                                         0x380 (size before relaxing)
- .debug_str     0x0000000000003405       0x11 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(errno.o)
+ .debug_str     0x00000000000033fe       0x11 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(errno.o)
                                          0x7e (size before relaxing)
 
-.debug_loc      0x0000000000000000     0x43e4
+.debug_loc      0x0000000000000000     0x43d2
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0x77 ./Satellitt Design ADCS.o
- .debug_loc     0x0000000000000077      0x25c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
- .debug_loc     0x00000000000002d3       0xb3 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
- .debug_loc     0x0000000000000386      0x102 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
- .debug_loc     0x0000000000000488      0x22c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
- .debug_loc     0x00000000000006b4      0x121 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
- .debug_loc     0x00000000000007d5       0x37 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(new.o)
- .debug_loc     0x000000000000080c      0x6ad /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
- .debug_loc     0x0000000000000eb9      0xea5 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
- .debug_loc     0x0000000000001d5e      0x129 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
- .debug_loc     0x0000000000001e87       0x52 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
- .debug_loc     0x0000000000001ed9      0x233 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
- .debug_loc     0x000000000000210c      0x68f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_pow.o)
- .debug_loc     0x000000000000279b      0x159 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(sf_scalbn.o)
- .debug_loc     0x00000000000028f4      0x17c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_sqrt.o)
- .debug_loc     0x0000000000002a70       0x30 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fixunssfsi.o)
- .debug_loc     0x0000000000002aa0      0x28b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_addsub_sf.o)
- .debug_loc     0x0000000000002d2b      0x204 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_mul_sf.o)
- .debug_loc     0x0000000000002f2f       0xf0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_div_sf.o)
- .debug_loc     0x000000000000301f       0x3c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_gt_sf.o)
- .debug_loc     0x000000000000305b       0x3c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_ge_sf.o)
- .debug_loc     0x0000000000003097       0x3c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_lt_sf.o)
- .debug_loc     0x00000000000030d3       0x3c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_le_sf.o)
- .debug_loc     0x000000000000310f       0x9a /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_si_to_sf.o)
- .debug_loc     0x00000000000031a9       0x3c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_sf_to_si.o)
- .debug_loc     0x00000000000031e5       0x66 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_usi_to_sf.o)
- .debug_loc     0x000000000000324b       0x70 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clzsi2.o)
- .debug_loc     0x00000000000032bb      0x154 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_pack_sf.o)
- .debug_loc     0x000000000000340f       0x72 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_unpack_sf.o)
- .debug_loc     0x0000000000003481       0x5b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fpcmp_parts_sf.o)
- .debug_loc     0x00000000000034dc        0xb /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strchr.o)
- .debug_loc     0x00000000000034e7       0x24 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcmp.o)
- .debug_loc     0x000000000000350b       0x38 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncmp.o)
- .debug_loc     0x0000000000003543       0x12 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcpy.o)
- .debug_loc     0x0000000000003555       0x45 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncpy.o)
- .debug_loc     0x000000000000359a      0x1b7 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
- .debug_loc     0x0000000000003751      0x1b7 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memmove.o)
- .debug_loc     0x0000000000003908       0x39 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strrchr.o)
- .debug_loc     0x0000000000003941       0x89 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strstr.o)
- .debug_loc     0x00000000000039ca        0xb /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(atol.o)
- .debug_loc     0x00000000000039d5       0xeb /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(malloc.o)
- .debug_loc     0x0000000000003ac0      0x1aa /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strtol.o)
- .debug_loc     0x0000000000003c6a       0xe3 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(sprintf.o)
- .debug_loc     0x0000000000003d4d      0x697 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(vuprintf.o)
+ .debug_loc     0x0000000000000000       0x65 ./Satellitt Design ADCS.o
+ .debug_loc     0x0000000000000065      0x25c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(Wire.o)
+ .debug_loc     0x00000000000002c1       0xb3 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_Wire/Debug/libmsp430_MSP-EXP430F5529LP_Wire.a(twi.o)
+ .debug_loc     0x0000000000000374      0x102 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .debug_loc     0x0000000000000476      0x22c /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+ .debug_loc     0x00000000000006a2      0x121 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+ .debug_loc     0x00000000000007c3       0x37 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(new.o)
+ .debug_loc     0x00000000000007fa      0x6ad /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+ .debug_loc     0x0000000000000ea7      0xea5 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
+ .debug_loc     0x0000000000001d4c      0x129 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
+ .debug_loc     0x0000000000001e75       0x52 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
+ .debug_loc     0x0000000000001ec7      0x233 /home/sew/workspace_v10/msp430_MSP-EXP430F5529LP_core/Debug/libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
+ .debug_loc     0x00000000000020fa      0x68f /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_pow.o)
+ .debug_loc     0x0000000000002789      0x159 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(sf_scalbn.o)
+ .debug_loc     0x00000000000028e2      0x17c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libm.a(ef_sqrt.o)
+ .debug_loc     0x0000000000002a5e       0x30 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fixunssfsi.o)
+ .debug_loc     0x0000000000002a8e      0x28b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_addsub_sf.o)
+ .debug_loc     0x0000000000002d19      0x204 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_mul_sf.o)
+ .debug_loc     0x0000000000002f1d       0xf0 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_div_sf.o)
+ .debug_loc     0x000000000000300d       0x3c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_gt_sf.o)
+ .debug_loc     0x0000000000003049       0x3c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_ge_sf.o)
+ .debug_loc     0x0000000000003085       0x3c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_lt_sf.o)
+ .debug_loc     0x00000000000030c1       0x3c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_le_sf.o)
+ .debug_loc     0x00000000000030fd       0x9a /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_si_to_sf.o)
+ .debug_loc     0x0000000000003197       0x3c /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_sf_to_si.o)
+ .debug_loc     0x00000000000031d3       0x66 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_usi_to_sf.o)
+ .debug_loc     0x0000000000003239       0x70 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_clzsi2.o)
+ .debug_loc     0x00000000000032a9      0x154 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_pack_sf.o)
+ .debug_loc     0x00000000000033fd       0x72 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_unpack_sf.o)
+ .debug_loc     0x000000000000346f       0x5b /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_loc     0x00000000000034ca        0xb /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strchr.o)
+ .debug_loc     0x00000000000034d5       0x24 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcmp.o)
+ .debug_loc     0x00000000000034f9       0x38 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncmp.o)
+ .debug_loc     0x0000000000003531       0x12 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strcpy.o)
+ .debug_loc     0x0000000000003543       0x45 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strncpy.o)
+ .debug_loc     0x0000000000003588      0x1b7 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .debug_loc     0x000000000000373f      0x1b7 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memmove.o)
+ .debug_loc     0x00000000000038f6       0x39 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strrchr.o)
+ .debug_loc     0x000000000000392f       0x89 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strstr.o)
+ .debug_loc     0x00000000000039b8        0xb /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(atol.o)
+ .debug_loc     0x00000000000039c3       0xeb /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(malloc.o)
+ .debug_loc     0x0000000000003aae      0x1aa /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(strtol.o)
+ .debug_loc     0x0000000000003c58       0xe3 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(sprintf.o)
+ .debug_loc     0x0000000000003d3b      0x697 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(vuprintf.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -2556,6 +2545,6 @@ LOAD /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/
  .debug_ranges  0x0000000000000418        0xc /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(malloc.o)
  .debug_ranges  0x0000000000000424       0x18 /home/sew/Documents/energia-1.8.10E23/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(vuprintf.o)
                 0x0000000000004400                PROVIDE (__stack, (ORIGIN (ram) + 0x2000))
-                0x000000000000595c                PROVIDE (__data_start_rom, _etext)
-                0x000000000000595e                PROVIDE (__data_end_rom, (_etext + SIZEOF (.data)))
+                0x0000000000005738                PROVIDE (__data_start_rom, _etext)
+                0x000000000000573a                PROVIDE (__data_end_rom, (_etext + SIZEOF (.data)))
 OUTPUT(Satellitt Design ADCS.out elf32-msp430)

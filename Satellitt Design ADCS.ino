@@ -16,13 +16,11 @@ void setup() {
     Wire.begin();
 
     Serial.begin(115200);
-    while (!Serial)
-    delay(10);
-    Serial.println("\nI2C Scanner");
 
+    // Start IMU
     Wire.beginTransmission(accelAddr);
     Wire.write(0x10);
-    Wire.write(0x50);
+    Wire.write(0xA0);
     Wire.endTransmission();
 
 }
@@ -30,17 +28,16 @@ void setup() {
 
 void loop() {
 
+    // Read WHO AM I? This is just for debug
     Wire.beginTransmission(accelAddr);
-    sleep(1);
-
-    Wire.write(15);
+    Wire.write(0x0F);
     Wire.endTransmission();
 
-    Wire.requestFrom(accelAddr, 1);
-    int whoAmI = Wire.read();
-    Serial.println(whoAmI);
+    Wire.requestFrom(accelAddr,1);
+    Serial.print(Wire.read());
 
 
+    // Get accelerometer data
     Wire.beginTransmission(accelAddr);
     Wire.write(0x28);
     Wire.endTransmission();
@@ -54,6 +51,8 @@ void loop() {
     int accelZl = Wire.read();
     int accelZh = Wire.read();
 
+
+    // Merge together registers
     int accelX = (accelXh << 8) | accelXl;
     if (accelX > 32767){
         accelX -= 65536;
@@ -69,6 +68,8 @@ void loop() {
         accelX -= 65536;
     }
 
+
+    // Print out values via serial to terminal
     Serial.print("X: ");
     Serial.print(accelX);
     Serial.print(", Y: ");
@@ -76,5 +77,5 @@ void loop() {
     Serial.print(", Z: ");
     Serial.println(accelZ);
 
-  delay(100);           // wait 5 seconds for next scan
+  delay(100);           // wait for next
 }

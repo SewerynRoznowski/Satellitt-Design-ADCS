@@ -23,13 +23,10 @@ void setup() {
     Wire.begin();
 
     Serial.begin(115200);
-    while (!Serial)
-    delay(10);
-    Serial.println("\nI2C Scanner");
 
     Wire.beginTransmission(accelAddr);
     Wire.write(0x10);
-    Wire.write(0x50);
+    Wire.write(0xA0);
     Wire.endTransmission();
 
 }
@@ -38,14 +35,11 @@ void setup() {
 void loop() {
 
     Wire.beginTransmission(accelAddr);
-    sleep(1);
-
-    Wire.write(15);
+    Wire.write(0x0F);
     Wire.endTransmission();
 
-    Wire.requestFrom(accelAddr, 1);
-    int whoAmI = Wire.read();
-    Serial.println(whoAmI);
+    Wire.requestFrom(accelAddr,1);
+    Serial.print(Wire.read());
 
 
     Wire.beginTransmission(accelAddr);
