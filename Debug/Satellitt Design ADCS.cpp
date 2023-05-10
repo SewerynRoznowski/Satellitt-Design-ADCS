@@ -3,7 +3,7 @@
 #line 1 "/home/sew/workspace_v10/Satellitt Design ADCS/Satellitt Design ADCS.ino"
 #include <Energia.h>
 #include <Wire.h>
-#include <SatI2c.h>
+#include <SatADCS.h>
 
 
 void setup();
@@ -15,9 +15,6 @@ int magYOffset = 0;
 
 
 
-const int motorPWM = P1_4;
-const int motorEnA = P3_2;
-const int motorEnB = P2_7;
 const int calibrationToggle = P2_6;
 
 void setup() {
@@ -27,28 +24,10 @@ void setup() {
     Serial1.begin(115200);
 
     
-    Wire.beginTransmission(accelAddr);
-    Wire.write(0x10);
-    Wire.write(0xA0);
-    Wire.endTransmission();
+    SatSensor.initializeAccelGyro();
 
     
-    
-    pinMode(motorPWM, OUTPUT);
-    pinMode(motorEnA, OUTPUT);
-    pinMode(motorEnB, OUTPUT);
-
-    
-    digitalWrite(motorPWM, LOW);
-    digitalWrite(motorEnA, HIGH);
-    digitalWrite(motorEnB, LOW);
-
-    
-    Wire.beginTransmission(magAddr);
-    Wire.write(0x0A);
-    Wire.write(0x00);
-    Wire.write(0xBD);
-    Wire.endTransmission();
+    SatSensor.initializeMag();
 
     
     pinMode(calibrationToggle, INPUT_PULLUP);
@@ -132,54 +111,29 @@ void loop() {
         heading = 360 + heading;
     }
 
+    if (heading < 180){
+        SatReactionWheel.changeMotorSpeed(10);
+    }   else {
+        SatReactionWheel.changeMotorSpeed(-10);
+    }
+
+    Serial1.println("CurrentPWM: " + String(SatReactionWheel.getCurrentPWM()));
+
     
     Serial1.println("Heading: " + String(heading));
 
     
-    Wire.beginTransmission(accelAddr);
-    Wire.write(0x28);
-    Wire.endTransmission();
+    
 
-    Wire.requestFrom(accelAddr,6);
 
-    int accelXl = Wire.read();
-    int accelXh = Wire.read();
-    int accelYl = Wire.read();
-    int accelYh = Wire.read();
-    int accelZl = Wire.read();
-    int accelZh = Wire.read();
+
 
 
     
-    int accelX = (accelXh << 8) | accelXl;
+    
 
-    int accelY = (accelYh << 8) | accelYl;
 
-    int accelZ = (accelZh << 8) | accelZl;  
 
-    delay(5000);
-
-    digitalWrite(motorEnA, HIGH);
-    digitalWrite(motorEnB, LOW);
-    analogWrite(motorPWM, 220);
-
-    delay(5000);
-
-    digitalWrite(motorEnA, LOW);
-    digitalWrite(motorEnB, LOW);
-    analogWrite(motorPWM, 0);
-
-    delay(5000);
-
-    digitalWrite(motorEnA, LOW);
-    digitalWrite(motorEnB, HIGH);
-    analogWrite(motorPWM, 220);
-
-    delay(5000);
-
-    digitalWrite(motorEnA, LOW);
-    digitalWrite(motorEnB, LOW);
-    analogWrite(motorPWM, 0);
 
 
 
