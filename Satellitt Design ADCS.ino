@@ -30,12 +30,16 @@ void setup() {
 
 void loop() {
     
-    if (digitalRead(calibrationToggle) == LOW){
-        
+
+
+    SatTelemetry.recieveData();
+    SatCommands.commandSelect();
+    
+    if (calibrationMode == true){
         // 
-        Serial1.println("Calibrating magnetometer");
-        delay(3000);
-        
+        Serial1.println("Calibrating magnetometer");       
+        Serial1.println("Resetting offsets");
+
         // Reset offsets
         magXOffset = 0;
         magYOffset = 0;
@@ -49,9 +53,17 @@ void loop() {
         int magYPosOffset = magYc;
         int magYNegOffset = magYc;
         
-        delay(100);
+        int calibrationTime = 5000;
 
-        while (digitalRead(calibrationToggle) == LOW){
+        delay(3000);
+
+        Serial1.println("Spin left");
+
+        SatReactionWheel.setMotorSpeed(150);
+
+        unsigned long startTime = millis();
+
+        while (millis() - startTime < calibrationTime){
             
             int magXc, magYc, magZc;
 
@@ -75,6 +87,11 @@ void loop() {
 
             delay(100);
         }
+
+        Serial1.println("Stop spin");
+        SatReactionWheel.setMotorSpeed(0);
+        calibrationMode = false;
+
         magXOffset = (magXPosOffset + magXNegOffset)/2;
         magYOffset = (magYPosOffset + magYNegOffset)/2;
 
@@ -104,13 +121,7 @@ void loop() {
         heading = 360 + heading;
     }
 
-    if (heading < 180){
-        SatReactionWheel.changeMotorSpeed(10);
-    }   else {
-        SatReactionWheel.changeMotorSpeed(-10);
-    }
-
-    Serial1.println("CurrentPWM: " + String(SatReactionWheel.getCurrentPWM()));
+    //Serial1.println("CurrentPWM: " + String(SatReactionWheel.getCurrentPWM()));
 
     // Print heading
     Serial1.println("Heading: " + String(heading));

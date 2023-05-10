@@ -21,6 +21,10 @@ const int minPWM = 30;
 
 int currentPWM = 0;
 
+bool calibrationMode = false;
+
+int commandBuffer[10];
+
 // Class contaning all functions related to the sensors
 class SatSensorSingelton { 
     public: 
@@ -49,8 +53,7 @@ class SatSensorSingelton {
         Wire.write(0x00);                   // Set register pointer to 0x00
         Wire.endTransmission();             // End transmission
         
-        // Request 6 bytes from magnetometer
-        Wire.requestFrom(magAddr,6);
+        Wire.requestFrom(magAddr,6);        // Request 6 bytes from magnetometer
 
         // Read 6 bytes from magnetometer
         int magXhRaw = Wire.read();
@@ -71,21 +74,22 @@ class SatSensorSingelton {
         magZ = umagZ - 32768;
     }
 
+    // Returns the raw accelerometer data, pass by reference
     void getAccelData(int& accelX, int& accelY, int& accelZ){
-        // Get accelerometer data
-        Wire.beginTransmission(accelAddr);
-        Wire.write(0x28);
-        Wire.endTransmission();
+        
+        Wire.beginTransmission(accelAddr);  // Write to accelerometer and gyroscope
+        Wire.write(0x28);                   // Set register pointer to 0x28
+        Wire.endTransmission();             // End transmission
 
-        Wire.requestFrom(accelAddr,6);
+        Wire.requestFrom(accelAddr,6);      // Request 6 bytes from accelerometer
 
+        // Read 6 bytes from accelerometer
         int accelXl = Wire.read();
         int accelXh = Wire.read();
         int accelYl = Wire.read();
         int accelYh = Wire.read();
         int accelZl = Wire.read();
         int accelZh = Wire.read();
-
 
         // Merge together registers
         accelX = (accelXh << 8) | accelXl;
@@ -94,13 +98,14 @@ class SatSensorSingelton {
     }
 
     void getGyroData(int& gyroX, int& gyroY, int& gyroZ){
-        // Get gyroscope data
-        Wire.beginTransmission(accelAddr);
-        Wire.write(0x22);
-        Wire.endTransmission();
+        
+        Wire.beginTransmission(accelAddr);  // Write to accelerometer and gyroscope
+        Wire.write(0x22);                   // Set register pointer to 0x22
+        Wire.endTransmission();             // End transmission
 
-        Wire.requestFrom(accelAddr,6);
+        Wire.requestFrom(accelAddr,6);      // Request 6 bytes from gyroscope
 
+        // Read 6 bytes from gyroscope
         int gyroXl = Wire.read();
         int gyroXh = Wire.read();
         int gyroYl = Wire.read();
@@ -121,23 +126,27 @@ class SatReactionWheelSingleton{
 
 public:
     
+    // Constructor set all the pins for the reaction wheel
     SatReactionWheelSingleton(){
         pinMode(motorPWM, OUTPUT);
         pinMode(motorEnA, OUTPUT);
         pinMode(motorEnB, OUTPUT);
     }
 
-    
+    // Changes the speed of the reaction wheel
     void changeMotorSpeed(int speedDelta){
         currentPWM = currentPWM + speedDelta;
-        if (currentPWM > maxPWM){
+        
+        // Check if the speed is within the limits
+        if (currentPWM > maxPWM){       
             currentPWM = maxPWM;
         }
         else if (currentPWM < -255){
             currentPWM = -maxPWM;
         }
 
-        if (abs(currentPWM) < minPWM){
+        // Set the speed of the reaction wheel
+        if (abs(currentPWM) < minPWM){      
             digitalWrite(motorEnA, LOW);
             digitalWrite(motorEnB, LOW);
             analogWrite(motorPWM, 0);
@@ -154,6 +163,7 @@ public:
         }
     }
     
+    // Sets the speed of the reaction wheel
     void setMotorSpeed(int speed){
         currentPWM = speed;
         if (currentPWM > maxPWM){
@@ -180,13 +190,113 @@ public:
         }
     }
 
+    // Returns the current speed of the reaction wheel
     int getCurrentPWM(){
         return currentPWM;
     }
 };
 
-SatSensorSingelton SatSensor;
 SatReactionWheelSingleton SatReactionWheel;
+
+class SatTelemetrySingleton{
+    public: 
+
+    void recieveData(){
+        if (Serial1.available() > 0){
+            if (checkStartCode()){
+                int command = Serial1.read();
+                int dataLength = Serial1.read();
+                int data[dataLength];
+                for (int i = 0; i < dataLength; i++){
+                    data[i] = Serial1.read();
+                } 
+                if(checkEndCode()){
+                    commandBuffer[0] = command;
+                    for (int i = 0; i < dataLength; i++){
+                        commandBuffer[i+1] = data[i];
+                    }
+                }
+            }
+
+        }
+    }
+
+    void sendData(){
+    
+    }
+    bool checkStartCode(){
+        
+        int inByte = Serial1.read();
+
+        if (inByte == 0xAB){
+            int inByte2 = Serial1.read();
+            if (inByte2 == 0xCD){
+                
+                return 1;
+            } else {
+                return 0;
+            }
+        } else {
+            return 0;
+        }
+    }
+
+    bool checkEndCode(){
+        int inByte = Serial1.read();
+        if (inByte == 0xEF){
+            int inByte2 = Serial1.read();
+            if (inByte2 == 0x01){
+                return 1;
+            } else {
+                return 0;
+            }
+        } else {
+            return 0;
+        }
+    }
+
+    void getData(){
+    }
+};
+
+// Class containing all the commands that can be sent to the satellite
+class SatCommandsSingleton{
+    public: 
+    void commandSelect(){
+        switch (commandBuffer[0])
+        {
+        case 0x00: // do nothing            
+            break;
+        
+        case 0x01: // Enable calibration mode
+            if (commandBuffer[1] == 0x01){
+                calibrationMode = true;
+            } else if (commandBuffer[1] == 0x00){
+                calibrationMode = false;
+            }
+            
+            commandBuffer[0] = 0x00; // Reset command buffer1
+            break;
+
+        case 0x02: // Set reaction wheel speed
+            if (commandBuffer[1] == 0x00){
+                SatReactionWheel.setMotorSpeed(-commandBuffer[2]);
+            } else if (commandBuffer[1] == 0x01){
+                SatReactionWheel.setMotorSpeed(commandBuffer[2]);
+            }
+            commandBuffer[0] = 0x00; // Reset command buffer
+            break;
+
+        default: // do nothing if no command is selected
+            break;
+        }
+    }
+};
+
+
+SatSensorSingelton SatSensor;
+SatTelemetrySingleton SatTelemetry;
+SatCommandsSingleton SatCommands;
 
 
 
