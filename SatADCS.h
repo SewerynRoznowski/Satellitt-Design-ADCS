@@ -6,28 +6,22 @@
  */
 #include <Wire.h>
 #include <Energia.h>
+
 #ifndef SATADCS_H_
 #define SATADCS_H_
 
-const int accelAddr = 0x6b;
-const int magAddr = 0x30;
-
-const int motorPWM = P1_4;
-const int motorEnA = P3_2;
-const int motorEnB = P2_7;
-
-const int maxPWM = 255; 
-const int minPWM = 30;
-
-int currentPWM = 0;
-
-bool calibrationMode = false;
-
-int commandBuffer[10];
-
 // Class contaning all functions related to the sensors
 class SatSensorSingelton { 
-    public: 
+private:
+    static const int accelAddr = 0x6b;
+    static const int magAddr = 0x30;
+public: 
+
+    int magXOffset;
+    int magYOffset;
+    
+    SatSensorSingelton (){
+    }
 
     // Initializes the accelerometer and gyroscope
     void initializeAccelGyro(){
@@ -124,13 +118,24 @@ class SatSensorSingelton {
 // Class contaning all functions related to the reaction wheel
 class SatReactionWheelSingleton{
 
-public:
+private: 
+    static const int motorPWM = P1_4;
+    static const int motorEnA = P3_2;
+    static const int motorEnB = P2_7;
+
+    static const int maxPWM = 220; 
+    static const int minPWM = 5;
     
+    int currentPWM;
+
+public:
     // Constructor set all the pins for the reaction wheel
     SatReactionWheelSingleton(){
         pinMode(motorPWM, OUTPUT);
         pinMode(motorEnA, OUTPUT);
         pinMode(motorEnB, OUTPUT);
+        
+        currentPWM = 0;
     }
 
     // Changes the speed of the reaction wheel
@@ -196,12 +201,17 @@ public:
     }
 };
 
-SatReactionWheelSingleton SatReactionWheel;
-
 class SatTelemetrySingleton{
-    public: 
+private:
+    int telemetryMode; 
 
-    void recieveData(){
+public: 
+
+    SatTelemetrySingleton(){
+        telemetryMode = 0;
+    }
+
+    void recieveData(int* commandBuffer){
         if (Serial1.available() > 0){
             if (checkStartCode()){
                 int command = Serial1.read();
@@ -257,12 +267,192 @@ class SatTelemetrySingleton{
 
     void getData(){
     }
+
+    void setTelemetryMode(int mode){
+        telemetryMode = mode;
+    }
 };
+
+class SatPIDSingleton{
+private: 
+    float Kp;
+    float Ki;
+    float Kd;
+    
+    float angularVelocity;
+    float angularVelocityOld;
+
+    float currentHeading;
+    float oldHeading; 
+    float desiredHeading;
+    float headingError;
+
+    float integral;
+    float integralOld;
+
+    unsigned long timeOld;
+    unsigned long timeNew;
+    double timeStep;
+
+    float output;
+public: 
+    SatPIDSingleton(){
+    Kp = 2;
+    Ki = 0.1;
+    Kd = 0.7;
+
+    angularVelocity = 0;
+    angularVelocityOld = 0;
+
+    currentHeading = 0;
+    oldHeading = 0;
+    desiredHeading = 0;
+    headingError = 0;
+
+    integral = 0;
+    integralOld = 0;
+
+    timeOld = 0;
+    timeNew = 0;
+    timeStep = 0;
+
+    output = 0;
+    }
+    
+    void setKp(float Kp){
+        this->Kp = Kp;
+    }
+
+    void setKi(float Ki){
+        this->Ki = Ki;
+    }
+
+    void setKd(float Kd){
+        this->Kd = Kd;
+    }
+
+    void resetIntergral(){
+        integral = 0;
+        integralOld = 0;
+    }
+
+    void setDesiredHeading(float desiredHeading){
+        this->desiredHeading = desiredHeading;
+    }
+
+    float headingHoldLoop(float heading){
+        timeNew = millis();
+        timeStep = (timeNew - timeOld);
+        double timeStep2 = timeStep / 1000;
+
+        currentHeading = heading;
+        headingError = currentHeading - desiredHeading;
+        if (headingError > 180){
+            headingError = headingError - 360;
+        }
+        else if (headingError < -180){
+            headingError = headingError + 360;
+        }
+
+        float headingStep = currentHeading - oldHeading;
+        if (headingStep > 180){
+            headingStep = headingStep - 360;
+        }
+        else if (headingStep < -180){
+            headingStep = headingStep + 360;
+        }
+
+        oldHeading = currentHeading;
+
+        angularVelocity = headingStep / timeStep2;
+
+        timeOld = timeNew;
+
+        if (abs(output) < 245){
+            integral = integralOld + (timeStep2 * Ki * headingError);    
+        }
+
+        integralOld = integral;
+
+        //output = (-Kp*headingError-Kd*angularVelocity + integral);
+        output = (-Kp*headingError-Kd*(angularVelocity) - integral);
+
+        return output;
+    }
+
+    float detumbleLoop(float heading){
+        timeNew = millis();
+        timeStep = (timeNew - timeOld);
+        double timeStep2 = timeStep / 1000;
+
+        currentHeading = heading;
+        float headingStep = currentHeading - oldHeading;
+        if (headingStep > 180){
+            headingStep = headingStep - 360;
+        }
+        else if (headingStep < -180){
+            headingStep = headingStep + 360;
+        }
+
+        oldHeading = currentHeading;
+        timeOld = timeNew;
+        
+        angularVelocity = headingStep / timeStep2;
+
+        double angularAcceleration = (angularVelocity - angularVelocityOld) / timeStep2;
+
+        angularVelocityOld = angularVelocity;
+
+        if (abs(output) < 245){
+            integral = integralOld + (timeStep2 * Ki * angularVelocity);    
+        }
+
+        integralOld = integral;
+
+        Serial1.println("angularVelocity: "+String(angularVelocity)+" angularAcceleration: "+String(angularAcceleration)+" integral: "+String(integral)+" output: "+String(output));
+
+        output = (-Kp*angularVelocity*0.1-Kd*angularAcceleration*0.1 - integral);
+
+        return output;
+    }
+};
+
 
 // Class containing all the commands that can be sent to the satellite
 class SatCommandsSingleton{
-    public: 
+private:
+    bool calibrationMode;
+
+    void clearCommandBuffer(){
+        for (int i = 0; i < 32; i++){
+            commandBuffer[i] = 0x00;
+        }
+    }
+
+public: 
+    int commandBuffer[32];
+    int modeofOperation;
+    SatCommandsSingleton(){
+        for (int i = 0; i < 32; i++){
+            commandBuffer[i] = 0x00;
+        }
+        calibrationMode = false;
+        modeofOperation = 0;
+    }
+
+    SatSensorSingelton SatSensor;
+    SatTelemetrySingleton SatTelemetry;
+    SatReactionWheelSingleton SatReactionWheel;
+    SatPIDSingleton SatPID;
+
     void commandSelect(){
+
+        float heading = 0;
+        float gainP = 0;
+        float gainI = 0;
+        float gainD = 0;
+        int temp = 0;
+
         switch (commandBuffer[0])
         {
         case 0x00: // do nothing            
@@ -270,33 +460,134 @@ class SatCommandsSingleton{
         
         case 0x01: // Enable calibration mode
             if (commandBuffer[1] == 0x01){
-                calibrationMode = true;
-            } else if (commandBuffer[1] == 0x00){
-                calibrationMode = false;
+                calibrateMag();
             }
-            
-            commandBuffer[0] = 0x00; // Reset command buffer1
+            clearCommandBuffer(); // Reset command buffer1
             break;
 
-        case 0x02: // Set reaction wheel speed
-            if (commandBuffer[1] == 0x00){
-                SatReactionWheel.setMotorSpeed(-commandBuffer[2]);
-            } else if (commandBuffer[1] == 0x01){
-                SatReactionWheel.setMotorSpeed(commandBuffer[2]);
-            }
-            commandBuffer[0] = 0x00; // Reset command buffer
+        case 0x02: // Mode of operation
+            
+            modeofOperation = commandBuffer[1];
+            Serial1.println(commandBuffer[1]);
+            clearCommandBuffer(); // Reset command buffer
+            break;
+
+        case 0x03: 
+            // combine 2 8bit values into 1 16bit value
+            heading = (commandBuffer[1] << 8) | commandBuffer[2];
+            SatPID.setDesiredHeading(heading);
+            Serial1.println(heading);
+            clearCommandBuffer(); // Reset command buffer
+            break; 
+        
+        case 0x04: // Set telemetry mode
+            SatTelemetry.setTelemetryMode(commandBuffer[1]);
+            clearCommandBuffer(); // Reset command buffer
+            break;
+
+        case 0x05: // Set PID gains 
+
+            temp = commandBuffer[1];
+            gainP = temp / 10.0;
+
+            temp = commandBuffer[2];
+            gainI = temp / 10.0;
+
+            temp = commandBuffer[3];
+            gainD = temp / 10.0;
+
+            SatPID.setKp(gainP);
+            SatPID.setKi(gainI);
+            SatPID.setKd(gainD);
+            clearCommandBuffer(); // Reset command buffer
+            break; 
+            
+        case 0x06: // place holder
+            SatPID.resetIntergral();
+            clearCommandBuffer(); // Reset command buffer
+            break;
+
+        case 0x07: // place holder
+            clearCommandBuffer(); // Reset command buffer
             break;
 
         default: // do nothing if no command is selected
+            clearCommandBuffer(); // Reset command buffer
             break;
         }
     }
+
+    void calibrateMag(){
+        Serial1.println("Calibrating magnetometer");       
+        Serial1.println("Resetting offsets");
+
+        // Reset offsets
+        SatSensor.magXOffset = 0;
+        SatSensor.magYOffset = 0;
+
+        // Get magnetometer data
+        int magXc, magYc, magZc;
+        SatSensor.getMagData(magXc, magYc, magZc);
+
+        int magXPosOffset = magXc;
+        int magXNegOffset = magXc;
+        int magYPosOffset = magYc;
+        int magYNegOffset = magYc;
+        
+        int calibrationTime = 5000;
+
+        delay(3000);
+
+        Serial1.println("Spin left");
+
+        SatReactionWheel.setMotorSpeed(150);
+
+        unsigned long startTime = millis();
+
+        while (millis() - startTime < calibrationTime){
+            
+            int magXc, magYc, magZc;
+
+            SatSensor.getMagData(magXc, magYc, magZc);
+
+            if (magXc > magXPosOffset){
+                magXPosOffset = magXc;
+            } 
+            if (magXc < magXNegOffset){
+                magXNegOffset = magXc;
+            }
+
+            if (magYc > magYPosOffset){
+                magYPosOffset = magYc;
+            }
+            if (magYc < magYNegOffset){
+                magYNegOffset = magYc;
+            }
+            // Print offsets to serial
+            Serial1.println("Offsets: " + String(magXPosOffset) + " " + String(magXNegOffset) + " " + String(magYPosOffset) + " " + String(magYNegOffset));
+
+            delay(100);
+        }
+
+        Serial1.println("Stop spin");
+        SatReactionWheel.setMotorSpeed(0);
+        calibrationMode = false;
+
+        SatSensor.magXOffset = (magXPosOffset + magXNegOffset)/2;
+        SatSensor.magYOffset = (magYPosOffset + magYNegOffset)/2;
+
+        Serial1.println("Calibration done");
+        Serial1.println("Offsets: " + String(SatSensor.magXOffset) + " " + String(SatSensor.magYOffset));
+
+        SatPID.resetIntergral();
+        
+        delay(3000);
+    }
+
 };
 
 
-SatSensorSingelton SatSensor;
-SatTelemetrySingleton SatTelemetry;
-SatCommandsSingleton SatCommands;
+SatCommandsSingleton SatCommand;
 
 
 

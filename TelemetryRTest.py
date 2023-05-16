@@ -1,7 +1,7 @@
 import serial
 import time
 
-ser = serial.Serial('/dev/ttyACM2', 115200)  # replace with your serial port and baud rate
+ser = serial.Serial('/dev/ttyACM0', 115200)  # replace with your serial port and baud rate
 
 
 while True:

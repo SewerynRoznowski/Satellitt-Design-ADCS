@@ -24,10 +24,10 @@ void setup() {
     Serial1.begin(115200);
 
     
-    SatSensor.initializeAccelGyro();
+    SatCommand.SatSensor.initializeAccelGyro();
 
     
-    SatSensor.initializeMag();
+    SatCommand.SatSensor.initializeMag();
 
     
     pinMode(calibrationToggle, INPUT_PULLUP);
@@ -37,84 +37,16 @@ void setup() {
 
 void loop() {
     
-
-
-    SatTelemetry.recieveData();
-    SatCommands.commandSelect();
-    
-    if (calibrationMode == true){
-        
-        Serial1.println("Calibrating magnetometer");       
-        Serial1.println("Resetting offsets");
-
-        
-        magXOffset = 0;
-        magYOffset = 0;
-
-        
-        int magXc, magYc, magZc;
-        SatSensor.getMagData(magXc, magYc, magZc);
-
-        int magXPosOffset = magXc;
-        int magXNegOffset = magXc;
-        int magYPosOffset = magYc;
-        int magYNegOffset = magYc;
-        
-        int calibrationTime = 5000;
-
-        delay(3000);
-
-        Serial1.println("Spin left");
-
-        SatReactionWheel.setMotorSpeed(150);
-
-        unsigned long startTime = millis();
-
-        while (millis() - startTime < calibrationTime){
-            
-            int magXc, magYc, magZc;
-
-            SatSensor.getMagData(magXc, magYc, magZc);
-
-            if (magXc > magXPosOffset){
-                magXPosOffset = magXc;
-            } 
-            if (magXc < magXNegOffset){
-                magXNegOffset = magXc;
-            }
-
-            if (magYc > magYPosOffset){
-                magYPosOffset = magYc;
-            }
-            if (magYc < magYNegOffset){
-                magYNegOffset = magYc;
-            }
-            
-            Serial1.println("Offsets: " + String(magXPosOffset) + " " + String(magXNegOffset) + " " + String(magYPosOffset) + " " + String(magYNegOffset));
-
-            delay(100);
-        }
-
-        Serial1.println("Stop spin");
-        SatReactionWheel.setMotorSpeed(0);
-        calibrationMode = false;
-
-        magXOffset = (magXPosOffset + magXNegOffset)/2;
-        magYOffset = (magYPosOffset + magYNegOffset)/2;
-
-        Serial1.println("Calibration done");
-        Serial1.println("Offsets: " + String(magXOffset) + " " + String(magYOffset));
-
-        delay(3000);
-    }
+    SatCommand.SatTelemetry.recieveData(SatCommand.commandBuffer);
+    SatCommand.commandSelect();
     
     
     
     int magX, magY, magZ;
-    SatSensor.getMagData(magX, magY, magZ);
+    SatCommand.SatSensor.getMagData(magX, magY, magZ);
 
-    magX = magX - magXOffset;
-    magY = magY - magYOffset;
+    magX = magX - SatCommand.SatSensor.magXOffset;
+    magY = magY - SatCommand.SatSensor.magYOffset;
 
     
     float heading = atan2(-magY, magX);
@@ -128,10 +60,24 @@ void loop() {
         heading = 360 + heading;
     }
 
+    float torque = 0; 
+    
+    if (SatCommand.modeofOperation == 2){
+        torque = SatCommand.SatPID.headingHoldLoop(heading);
+    } else if (SatCommand.modeofOperation == 1){
+        torque = SatCommand.SatPID.detumbleLoop(heading);
+    } else {
+        torque = 0;
+    }
+
+    
+
+    SatCommand.SatReactionWheel.setMotorSpeed(torque);
+
     
 
     
-    Serial1.println("Heading: " + String(heading));
+    
 
     
     
