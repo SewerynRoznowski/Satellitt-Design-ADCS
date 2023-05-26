@@ -10,9 +10,7 @@ void setup();
 void loop();
 
 #line 6
-int magXOffset = 0;
-int magYOffset = 0;
-
+unsigned long oldTime = 0; 
 
 
 const int calibrationToggle = P2_6;
@@ -36,66 +34,14 @@ void setup() {
 
 
 void loop() {
-    
-    SatCommand.SatTelemetry.recieveData(SatCommand.commandBuffer);
-    SatCommand.commandSelect();
-    
-    
-    
-    int magX, magY, magZ;
-    SatCommand.SatSensor.getMagData(magX, magY, magZ);
 
-    magX = magX - SatCommand.SatSensor.magXOffset;
-    magY = magY - SatCommand.SatSensor.magYOffset;
+    unsigned long currentTime = millis();
 
-    
-    float heading = atan2(-magY, magX);
-
-    
-    heading = heading * 180/PI;
-
-    
-    if(heading < 0)
-    {
-        heading = 360 + heading;
+    if (currentTime - oldTime >= 100) {
+        oldTime = currentTime;
+        SatCommand.programLoop();
     }
 
-    float torque = 0; 
-    
-    if (SatCommand.modeofOperation == 2){
-        torque = SatCommand.SatPID.headingHoldLoop(heading);
-    } else if (SatCommand.modeofOperation == 1){
-        torque = SatCommand.SatPID.detumbleLoop(heading);
-    } else {
-        torque = 0;
-    }
-
-    
-
-    SatCommand.SatReactionWheel.setMotorSpeed(torque);
-
-    
-
-    
-    
-
-    
-    
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-    delay(100);           
 }
 
 

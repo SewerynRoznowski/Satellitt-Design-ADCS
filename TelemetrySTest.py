@@ -36,7 +36,7 @@ while True:
         ser.write(dataToSend)
 
     elif user_input == "Set mode":
-        user_input = input("Set mode, 1. none, 2. detumble, 3. heading hold: ")
+        user_input = input("Set mode, 0. none, 1. detumble, 2. heading hold: ")
 
         user_input = int(user_input)
 

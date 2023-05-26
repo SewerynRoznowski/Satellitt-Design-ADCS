@@ -17,6 +17,20 @@ private:
     static const int magAddr = 0x30;
 public: 
 
+    int magXRaw; 
+    int magYRaw;
+    int magZRaw;
+
+    int accelXRaw;
+    int accelYRaw;
+    int accelZRaw;
+
+    int gyroXRaw;
+    int gyroYRaw;
+    int gyroZRaw;
+
+    float heading; 
+
     int magXOffset;
     int magYOffset;
     
@@ -40,8 +54,15 @@ public:
         Wire.endTransmission();             // End transmission
     }
 
+    void updateSensorData(){
+        getMagData();
+        getAccelData();
+        getGyroData();
+        calcHeading();
+    }
+
     // Returns the raw magnetometer data, pass by reference
-    void getMagData (int& magX , int& magY , int& magZ) {
+    void getMagData () {
         
         Wire.beginTransmission(magAddr);    // Write to magnetometer
         Wire.write(0x00);                   // Set register pointer to 0x00
@@ -63,13 +84,13 @@ public:
         uint umagZ = (magZhRaw << 8) | magZlRaw;
 
         // Subtract 32768 to get signed 16-bit value
-        magX = umagX - 32768;
-        magY = umagY - 32768;
-        magZ = umagZ - 32768;
+        magXRaw = umagX - 32768;
+        magYRaw = umagY - 32768;
+        magZRaw = umagZ - 32768;
     }
 
     // Returns the raw accelerometer data, pass by reference
-    void getAccelData(int& accelX, int& accelY, int& accelZ){
+    void getAccelData(){
         
         Wire.beginTransmission(accelAddr);  // Write to accelerometer and gyroscope
         Wire.write(0x28);                   // Set register pointer to 0x28
@@ -86,12 +107,12 @@ public:
         int accelZh = Wire.read();
 
         // Merge together registers
-        accelX = (accelXh << 8) | accelXl;
-        accelY = (accelYh << 8) | accelYl;
-        accelZ = (accelZh << 8) | accelZl; 
+        accelXRaw = (accelXh << 8) | accelXl;
+        accelYRaw = (accelYh << 8) | accelYl;
+        accelZRaw = (accelZh << 8) | accelZl; 
     }
 
-    void getGyroData(int& gyroX, int& gyroY, int& gyroZ){
+    void getGyroData(){
         
         Wire.beginTransmission(accelAddr);  // Write to accelerometer and gyroscope
         Wire.write(0x22);                   // Set register pointer to 0x22
@@ -108,10 +129,24 @@ public:
         int gyroZh = Wire.read();
 
         // Merge together registers
-        gyroX = (gyroXh << 8) | gyroXl;
-        gyroY = (gyroYh << 8) | gyroYl;
-        gyroZ = (gyroZh << 8) | gyroZl;
+        gyroXRaw = (gyroXh << 8) | gyroXl;
+        gyroYRaw = (gyroYh << 8) | gyroYl;
+        gyroZRaw = (gyroZh << 8) | gyroZl;
 
+    }
+
+    void calcHeading(){
+        int magX = magXRaw - magXOffset;
+        int magY = magYRaw - magYOffset;
+        
+        // Calculate heading from magnetometer data
+        heading = atan2(-magY, magX) * 180/PI;
+
+        // Correct for when signs are reversed.
+        if(heading < 0)
+        {
+            heading = 360 + heading;
+        }
     }
 };
 
@@ -296,6 +331,8 @@ private:
 
     float output;
 public: 
+
+    int modeOfOperation;
     SatPIDSingleton(){
     Kp = 2;
     Ki = 0.1;
@@ -317,6 +354,8 @@ public:
     timeStep = 0;
 
     output = 0;
+
+    modeOfOperation = 0;
     }
     
     void setKp(float Kp){
@@ -339,7 +378,7 @@ public:
     void setDesiredHeading(float desiredHeading){
         this->desiredHeading = desiredHeading;
     }
-
+    
     float headingHoldLoop(float heading){
         timeNew = millis();
         timeStep = (timeNew - timeOld);
@@ -409,9 +448,13 @@ public:
 
         integralOld = integral;
 
-        Serial1.println("angularVelocity: "+String(angularVelocity)+" angularAcceleration: "+String(angularAcceleration)+" integral: "+String(integral)+" output: "+String(output));
-
         output = (-Kp*angularVelocity*0.1-Kd*angularAcceleration*0.1 - integral);
+
+        if (abs(angularVelocity) < 5){
+            modeOfOperation = 2;
+            desiredHeading = currentHeading;
+            Serial1.println("Detumble complete");
+        }
 
         return output;
     }
@@ -431,13 +474,11 @@ private:
 
 public: 
     int commandBuffer[32];
-    int modeofOperation;
     SatCommandsSingleton(){
         for (int i = 0; i < 32; i++){
             commandBuffer[i] = 0x00;
         }
         calibrationMode = false;
-        modeofOperation = 0;
     }
 
     SatSensorSingelton SatSensor;
@@ -467,7 +508,7 @@ public:
 
         case 0x02: // Mode of operation
             
-            modeofOperation = commandBuffer[1];
+            SatPID.modeOfOperation = commandBuffer[1];
             Serial1.println(commandBuffer[1]);
             clearCommandBuffer(); // Reset command buffer
             break;
@@ -526,13 +567,12 @@ public:
         SatSensor.magYOffset = 0;
 
         // Get magnetometer data
-        int magXc, magYc, magZc;
-        SatSensor.getMagData(magXc, magYc, magZc);
+        SatSensor.getMagData();
 
-        int magXPosOffset = magXc;
-        int magXNegOffset = magXc;
-        int magYPosOffset = magYc;
-        int magYNegOffset = magYc;
+        int magXPosOffset = SatSensor.magXRaw;
+        int magXNegOffset = SatSensor.magXRaw;
+        int magYPosOffset = SatSensor.magYRaw;
+        int magYNegOffset = SatSensor.magYRaw;
         
         int calibrationTime = 5000;
 
@@ -546,23 +586,22 @@ public:
 
         while (millis() - startTime < calibrationTime){
             
-            int magXc, magYc, magZc;
+            SatSensor.getMagData();
 
-            SatSensor.getMagData(magXc, magYc, magZc);
-
-            if (magXc > magXPosOffset){
-                magXPosOffset = magXc;
+            if (SatSensor.magXRaw > magXPosOffset){
+                magXPosOffset = SatSensor.magXRaw;
             } 
-            if (magXc < magXNegOffset){
-                magXNegOffset = magXc;
+            if (SatSensor.magXRaw < magXNegOffset){
+                magXNegOffset = SatSensor.magXRaw;
             }
 
-            if (magYc > magYPosOffset){
-                magYPosOffset = magYc;
+            if (SatSensor.magYRaw > magYPosOffset){
+                magYPosOffset = SatSensor.magYRaw;
             }
-            if (magYc < magYNegOffset){
-                magYNegOffset = magYc;
+            if (SatSensor.magYRaw < magYNegOffset){
+                magYNegOffset = SatSensor.magYRaw;
             }
+
             // Print offsets to serial
             Serial1.println("Offsets: " + String(magXPosOffset) + " " + String(magXNegOffset) + " " + String(magYPosOffset) + " " + String(magYNegOffset));
 
@@ -582,6 +621,27 @@ public:
         SatPID.resetIntergral();
         
         delay(3000);
+    }
+
+    void programLoop(){
+        SatTelemetry.recieveData(commandBuffer);
+        commandSelect();
+
+        SatSensor.updateSensorData();
+
+        float heading = SatSensor.heading;
+        float torque; 
+        
+        if (SatPID.modeOfOperation == 2){
+            torque = SatPID.headingHoldLoop(heading);
+        } else if (SatPID.modeOfOperation == 1){
+            torque = SatPID.detumbleLoop(heading);
+        } else {
+            torque = 0;
+        }
+
+        Serial1.println("Heading: " + String(heading) + " torque: " + String(torque));
+        SatReactionWheel.setMotorSpeed(torque);
     }
 
 };
