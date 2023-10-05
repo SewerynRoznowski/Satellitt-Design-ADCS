@@ -5,13 +5,11 @@
 // Define variables for magnetometer calibration
 unsigned long oldTime = 0; 
 
-// Define pins for motor controller
-const int calibrationToggle = P2_6;
-
 void setup() {
 
     Wire.begin();
 
+    Serial.begin(115200);
     Serial1.begin(115200);
 
     // Start IMU
@@ -19,9 +17,6 @@ void setup() {
 
     // Configure magnetometer
     SatCommand.SatSensor.initializeMag();
-
-    // Configure calibration switch
-    pinMode(calibrationToggle, INPUT_PULLUP);
 
 }
 

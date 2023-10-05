@@ -35,6 +35,8 @@ while True:
         
         ser.write(dataToSend)
 
+        print(data)
+
     elif user_input == "Set mode":
         user_input = input("Set mode, 0. none, 1. detumble, 2. heading hold: ")
 
@@ -69,8 +71,8 @@ while True:
         if user_input < 0: 
             user_input = 0
 
-        if user_input > 359:
-            user_input = 359
+        if user_input >= 360:
+            user_input = 0
 
         data.append(b'\x03')
         data.append(b'\x02')

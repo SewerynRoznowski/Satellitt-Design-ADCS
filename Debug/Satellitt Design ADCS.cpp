@@ -12,13 +12,11 @@ void loop();
 #line 6
 unsigned long oldTime = 0; 
 
-
-const int calibrationToggle = P2_6;
-
 void setup() {
 
     Wire.begin();
 
+    Serial.begin(115200);
     Serial1.begin(115200);
 
     
@@ -26,9 +24,6 @@ void setup() {
 
     
     SatCommand.SatSensor.initializeMag();
-
-    
-    pinMode(calibrationToggle, INPUT_PULLUP);
 
 }
 

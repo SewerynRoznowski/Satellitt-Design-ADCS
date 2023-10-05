@@ -10,6 +10,7 @@
 #ifndef SATADCS_H_
 #define SATADCS_H_
 
+
 // Class contaning all functions related to the sensors
 class SatSensorSingelton { 
 private:
@@ -158,7 +159,7 @@ private:
     static const int motorEnA = P3_2;
     static const int motorEnB = P2_7;
 
-    static const int maxPWM = 220; 
+    static const int maxPWM = 80;
     static const int minPWM = 5;
     
     int currentPWM;
@@ -209,7 +210,7 @@ public:
         if (currentPWM > maxPWM){
             currentPWM = maxPWM;
         }
-        else if (currentPWM < -255){
+        else if (currentPWM < -maxPWM){
             currentPWM = -maxPWM;
         }
 
@@ -481,6 +482,8 @@ public:
         calibrationMode = false;
     }
 
+    int test1;
+
     SatSensorSingelton SatSensor;
     SatTelemetrySingleton SatTelemetry;
     SatReactionWheelSingleton SatReactionWheel;
@@ -509,6 +512,7 @@ public:
         case 0x02: // Mode of operation
             
             SatPID.modeOfOperation = commandBuffer[1];
+            SatPID.resetIntergral();
             Serial1.println(commandBuffer[1]);
             clearCommandBuffer(); // Reset command buffer
             break;
@@ -543,7 +547,7 @@ public:
             clearCommandBuffer(); // Reset command buffer
             break; 
             
-        case 0x06: // place holder
+        case 0x06: // Reset PID
             SatPID.resetIntergral();
             clearCommandBuffer(); // Reset command buffer
             break;
@@ -604,7 +608,6 @@ public:
 
             // Print offsets to serial
             Serial1.println("Offsets: " + String(magXPosOffset) + " " + String(magXNegOffset) + " " + String(magYPosOffset) + " " + String(magYNegOffset));
-
             delay(100);
         }
 
@@ -624,10 +627,10 @@ public:
     }
 
     void programLoop(){
-        SatTelemetry.recieveData(commandBuffer);
-        commandSelect();
-
         SatSensor.updateSensorData();
+
+        Serial.println("test " + String(test1));
+        test1 = test1 + 1; 
 
         float heading = SatSensor.heading;
         float torque; 
@@ -640,6 +643,9 @@ public:
             torque = 0;
         }
 
+        SatTelemetry.recieveData(commandBuffer);
+        commandSelect();
+        
         Serial1.println("Heading: " + String(heading) + " torque: " + String(torque));
         SatReactionWheel.setMotorSpeed(torque);
     }
